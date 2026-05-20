@@ -22,6 +22,10 @@ body{background:#0d0221;overscroll-behavior:none;-webkit-tap-highlight-color:tra
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pop{0%{transform:scale(0.8);opacity:0}70%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
+@keyframes achBounce{0%{transform:translateX(-50%) scale(0.4) translateY(120px);opacity:0}55%{transform:translateX(-50%) scale(1.12) translateY(-8px);opacity:1}75%{transform:translateX(-50%) scale(0.96) translateY(0)}100%{transform:translateX(-50%) scale(1) translateY(0);opacity:1}}
+@keyframes iconSpin{0%{transform:scale(0) rotate(-180deg)}60%{transform:scale(1.2) rotate(10deg)}100%{transform:scale(1) rotate(0deg)}}
+@keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(105vh) rotate(720deg);opacity:0}}
+@keyframes screenFlash{0%{opacity:0}15%{opacity:1}100%{opacity:0}}
 </style>
 </head>
 <body>
@@ -217,7 +221,7 @@ const ACHIEVEMENTS=[
 ];
 
 const MOON=["🌑","🌒","🌓","🌔","🌕"];
-const NOTIF_MSGS=["Ciao Emanuela! 🌙 Pronta per una lezione?","Luna & Letters ti aspetta! ✨ Impara qualcosa di nuovo oggi.","Buongiorno! 💎 Il cristallo di oggi ti aspetta.","È ora di studiare inglese! 🌸 La luna ti dà energia.","Ciao! 🔮 Una nuova parola al giorno fa miracoli!","Hey Emanuela! ⭐ Il tuo segno dice: studia oggi!","La tua luna cresce! 🌒 Aggiungi un po' di XP oggi."];
+const NOTIF_MSGS=["Scus giovane! 🌙 Pronta per una lezione?","Luna & Letters ti aspetta! ✨ Quan sarapn salam e prosutt zij Nicol acop e zij Nicol a sott.","Buongiorno! 💎 Il cristallo di oggi ti aspetta.","È ora di studiare inglese! 🌸 La luna ti dà energia.AIII","Ciao! 🔮 Una nuova parola al giorno fa miracoli! come Kociack e maioe","Hey Emanuela! ⭐ Il tuo segno dice: te a mettr a frecc quand s gir!","La tua luna cresce! 🌒 quand s zapp e s pot zij Nicol nu ten nipot."];
 function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
 function getLevel(xp){return LEVELS.find(l=>xp<l.max)||LEVELS[LEVELS.length-1];}
 function getLevelProgress(xp){
@@ -244,6 +248,26 @@ const S={
   spk:{background:"rgba(144,202,249,0.15)",border:"1px solid rgba(144,202,249,0.3)",borderRadius:20,padding:"6px 16px",color:"#90caf9",fontSize:13,cursor:"pointer",margin:"8px 0 4px"},
 };
 
+// ── CONFETTI ──────────────────────────────────────────────────────────────────
+function Confetti(){
+  const[pieces]=useState(()=>Array.from({length:65},(_,i)=>({
+    id:i,x:Math.random()*100,delay:Math.random()*0.9,
+    dur:2.2+Math.random()*1.8,size:5+Math.random()*9,
+    color:['#7c4dff','#e040fb','#ffd54f','#f48fb1','#81d4fa','#a5d6a7','#ffab40','#ff6f00','#fff176'][i%9],
+    rot:Math.random()*360,circle:Math.random()>0.5
+  })));
+  return(
+    <div style={{position:'fixed',top:0,left:0,width:'100%',height:'100%',pointerEvents:'none',zIndex:10000,overflow:'hidden'}}>
+      {pieces.map(p=>(
+        <div key={p.id} style={{position:'absolute',left:`${p.x}%`,top:0,width:p.size,height:p.size,
+          background:p.color,borderRadius:p.circle?'50%':'2px',
+          animation:`confettiFall ${p.dur}s ${p.delay}s ease-in forwards`,
+          transform:`rotate(${p.rot}deg)`}}/>
+      ))}
+    </div>
+  );
+}
+
 // ── APP ───────────────────────────────────────────────────────────────────────
 function App(){
   // ── Persistent state ──────────────────────────────────────────
@@ -265,6 +289,7 @@ function App(){
   const[screen,setScreen]=useState('home');
   const[welcomeStep,setWelcomeStep]=useState(0);
   const[newAch,setNewAch]=useState(null);
+  const[showFlash,setShowFlash]=useState(false);
   const[showReset,setShowReset]=useState(false);
 
   // ── Crystal ──────────────────────────────────────────────────
@@ -299,6 +324,7 @@ function App(){
   const[qDone,setQDone]=useState(false);
   const[qRev,setQRev]=useState(false);
   const[qDaily,setQDaily]=useState(false);
+  const[tvQuizMode,setTvQuizMode]=useState(null);
 
   // Welcome-back notification
   useEffect(()=>{
@@ -447,20 +473,42 @@ function App(){
       return{...q,options:shuffle([q,...wrong])};
     });
     setQuiz(qs);setQStep(0);setQScore(0);setQAns(null);setQDone(false);setQRev(rev);setQDaily(daily);
+    setTvQuizMode(null);
+    setScreen('quiz');
+  }
+
+  function startTVQuiz(mode){
+    const all=[];
+    TV.forEach(s=>s.phrases.forEach(p=>all.push({...p,show:s.show,showEmoji:s.emoji})));
+    const sel=shuffle(all).slice(0,10);
+    const qs=sel.map(q=>{
+      if(mode==='show'){
+        const wrongShows=shuffle(TV.map(s=>({show:s.show,showEmoji:s.emoji})).filter(s=>s.show!==q.show)).slice(0,3);
+        return{...q,options:shuffle([{show:q.show,showEmoji:q.showEmoji},...wrongShows])};
+      } else {
+        const wrong=shuffle(all.filter(p=>p.it!==q.it)).slice(0,3);
+        return{...q,options:shuffle([q,...wrong])};
+      }
+    });
+    setQuiz(qs);setQStep(0);setQScore(0);setQAns(null);setQDone(false);setQRev(false);setQDaily(false);
+    setTvQuizMode(mode);
     setScreen('quiz');
   }
 
   function handleAns(opt){
     if(qAns) return;
     setQAns(opt);
-    const correct=qRev?opt.en===quiz[qStep].en:opt.it===quiz[qStep].it;
+    let correct;
+    if(tvQuizMode==='show') correct=opt.show===quiz[qStep].show;
+    else if(tvQuizMode==='translate') correct=opt.it===quiz[qStep].it;
+    else correct=qRev?opt.en===quiz[qStep].en:opt.it===quiz[qStep].it;
     if(correct){setQScore(s=>s+1);addXP(qDaily||qRev?20:10);markStudied();}
     playSound(correct);
     setTimeout(()=>{
       if(qStep+1>=quiz.length){
         setQDone(true);
         const finalScore=qScore+(correct?1:0);
-        if(!qRev&&finalScore===quiz.length&&quiz.length===10) setTimeout(()=>unlockAch('perfect_quiz'),300);
+        if(!qRev&&finalScore===quiz.length&&quiz.length===10){setTimeout(()=>unlockAch('perfect_quiz'),300);setShowFlash(true);setTimeout(()=>setShowFlash(false),900);}
         if(qDaily){
           setDailyDone(true);
           try{localStorage.setItem('ll_daily',JSON.stringify({date:todayStr(),done:true}));}catch{}
@@ -527,6 +575,20 @@ function App(){
       </div>
     );
   }
+
+  // ── GLOBAL OVERLAYS (used in every screen) ───────────────────
+  const overlays=(
+    <>
+      {showFlash&&<div style={{position:"fixed",inset:0,background:"linear-gradient(135deg,rgba(255,215,0,0.35),rgba(224,64,251,0.25))",pointerEvents:"none",zIndex:9997,animation:"screenFlash 0.9s ease forwards"}}/>}
+      {newAch&&<Confetti/>}
+      {newAch&&<div style={{position:"fixed",bottom:28,left:"50%",transform:"translateX(-50%)",background:"linear-gradient(135deg,#3a006f,#7c4dff,#e040fb)",borderRadius:24,padding:"20px 28px",zIndex:10001,textAlign:"center",boxShadow:"0 0 0 2px rgba(255,255,255,0.15), 0 12px 48px rgba(124,77,255,0.7)",minWidth:280,animation:"achBounce 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards"}}>
+        <div style={{fontSize:52,marginBottom:6,display:"inline-block",animation:"iconSpin 0.6s 0.1s cubic-bezier(0.34,1.56,0.64,1) both"}}>{newAch.icon}</div>
+        <div style={{fontWeight:900,fontSize:11,letterSpacing:2,color:"rgba(255,255,255,0.7)",textTransform:"uppercase",marginBottom:2}}>✨ Badge sbloccato!</div>
+        <div style={{fontWeight:800,fontSize:18,color:"#ffd54f",margin:"2px 0"}}>{newAch.title}</div>
+        <div style={{color:"rgba(255,255,255,0.75)",fontSize:13,marginTop:4}}>{newAch.desc}</div>
+      </div>}
+    </>
+  );
 
   // ── HOME ──────────────────────────────────────────────────────
   if(screen==="home") return(
@@ -632,14 +694,7 @@ function App(){
       </div>
       <div style={{...S.center,...S.muted,marginTop:8,fontSize:12}}>Fatto con 💙 per Emanuela</div>
     </div>
-
-    {/* Achievement popup */}
-    {newAch&&<div style={{position:"fixed",bottom:24,left:"50%",transform:"translateX(-50%)",background:"linear-gradient(135deg,#4a148c,#7c4dff)",borderRadius:20,padding:"14px 22px",zIndex:9999,textAlign:"center",boxShadow:"0 8px 32px rgba(124,77,255,0.5)",minWidth:260,animation:"slideUp 0.35s ease"}}>
-      <div style={{fontSize:32,marginBottom:4}}>{newAch.icon}</div>
-      <div style={{fontWeight:800,fontSize:15}}>Badge sbloccato!</div>
-      <div style={{fontWeight:700,fontSize:14,color:"#ffd54f",margin:"2px 0"}}>{newAch.title}</div>
-      <div style={{...S.muted,fontSize:12}}>{newAch.desc}</div>
-    </div>}
+    {overlays}
     </div>
   );
 
@@ -742,7 +797,7 @@ function App(){
             </button>
           ))}
         </div>
-      </div></div>
+      </div>{overlays}</div>
     );
   }
 
@@ -860,6 +915,29 @@ function App(){
           {factWordI<f.words.length-1?<button style={S.btn()} onClick={()=>{setFactWordI(i=>i+1);setFactFlipped(false);}}>Prossima →</button>
           :<button style={S.btn("linear-gradient(135deg,#2e7d32,#66bb6a)")} onClick={()=>{setScreen("home");setFactWordI(0);setFactFlipped(false);}}>🌟 Completato!</button>}
         </div>
+      </div>{overlays}</div>
+    );
+  }
+
+  // ── TV QUIZ PICK ──────────────────────────────────────────────
+  if(screen==="tvQuizPick"){
+    return(
+      <div style={S.app}><div style={S.wrap}>
+        <button style={S.back} onClick={()=>setScreen("tv")}>← Serie TV</button>
+        <div style={{...S.gtxt,fontSize:22,fontWeight:800,marginBottom:6,marginTop:20}}>🎬 Quiz Serie TV</div>
+        <div style={{...S.muted,marginBottom:24,textAlign:"center"}}>Scegli come giocare</div>
+        <div style={{display:"flex",flexDirection:"column",gap:14}}>
+          <button style={{...S.card({background:"linear-gradient(135deg,#1a0533,#0d1b4b)"}),...S.center,padding:28,cursor:"pointer",border:"1px solid rgba(124,77,255,0.3)",textAlign:"center",width:"100%"}} onClick={()=>startTVQuiz('show')}>
+            <div style={{fontSize:40,marginBottom:10}}>📺</div>
+            <div style={{fontWeight:800,fontSize:18,marginBottom:6,color:"#fff"}}>Indovina la Serie</div>
+            <div style={{...S.muted,fontSize:13}}>Leggi la frase e indovina da quale serie viene</div>
+          </button>
+          <button style={{...S.card({background:"linear-gradient(135deg,#1a0533,#0d1b4b)"}),...S.center,padding:28,cursor:"pointer",border:"1px solid rgba(224,64,251,0.3)",textAlign:"center",width:"100%"}} onClick={()=>startTVQuiz('translate')}>
+            <div style={{fontSize:40,marginBottom:10}}>🇮🇹</div>
+            <div style={{fontWeight:800,fontSize:18,marginBottom:6,color:"#fff"}}>Traduci la Frase</div>
+            <div style={{...S.muted,fontSize:13}}>Scegli la traduzione italiana giusta</div>
+          </button>
+        </div>
       </div></div>
     );
   }
@@ -869,7 +947,10 @@ function App(){
     const show=TV[tvI],phrase=show.phrases[tvPI];
     return(
       <div style={S.app}><div style={S.wrap}>
-        <button style={S.back} onClick={()=>{setScreen("home");setTvPI(0);setTvRev(false);}}>← Home</button>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+          <button style={S.back} onClick={()=>{setScreen("home");setTvPI(0);setTvRev(false);}}>← Home</button>
+          <button style={{...S.btn("linear-gradient(135deg,#7c4dff,#e040fb)"),padding:"8px 16px",fontSize:13}} onClick={()=>setScreen("tvQuizPick")}>🎬 Quiz</button>
+        </div>
         <div style={{display:"flex",gap:8,marginBottom:20,overflowX:"auto",paddingBottom:4}}>
           {TV.map((s,i)=>(
             <button key={i} onClick={()=>{setTvI(i);setTvPI(0);setTvRev(false);}}
@@ -891,7 +972,7 @@ function App(){
           {tvPI<show.phrases.length-1?<button style={S.btn()} onClick={()=>{setTvPI(i=>i+1);setTvRev(false);}}>Prossima →</button>
           :<button style={S.btn("linear-gradient(135deg,#2e7d32,#66bb6a)")} onClick={()=>{setScreen("home");setTvPI(0);setTvRev(false);}}>🌟 Completato!</button>}
         </div>
-      </div></div>
+      </div>{overlays}</div>
     );
   }
 
@@ -899,7 +980,7 @@ function App(){
   if(screen==="quiz"&&qDone){
     const total=quiz.length,score=qScore;
     return(
-      <div style={S.app}><div style={{...S.wrap,...S.center,paddingTop:60,animation:"fadeIn 0.4s ease"}}>
+      <><div style={S.app}><div style={{...S.wrap,...S.center,paddingTop:60,animation:"fadeIn 0.4s ease"}}>
         <div style={{fontSize:72,marginBottom:12,animation:"pop 0.4s ease"}}>{score>=total*0.8?"🏆":score>=total*0.5?"🌟":"💪"}</div>
         <div style={{...S.gtxt,fontSize:26,marginBottom:8}}>{score}/{total} corrette!</div>
         <div style={{...S.muted,fontSize:15,marginBottom:8}}>
@@ -908,49 +989,64 @@ function App(){
         {qDaily&&<div style={{background:"linear-gradient(135deg,#bf360c44,#ff6f0022)",border:"1px solid #ff6f0055",borderRadius:16,padding:"12px 20px",marginBottom:12,fontSize:14,color:"#ff6f00",fontWeight:700}}>🔥 Sfida del Giorno completata! +{score*20} XP guadagnati!</div>}
         {!qDaily&&<div style={{fontSize:22,color:"#ffd54f",marginBottom:24}}>+{score*(qRev?20:10)} XP guadagnati!</div>}
         <div style={{display:"flex",flexDirection:"column",gap:12,alignItems:"center",marginTop:16}}>
-          <button style={S.btn()} onClick={()=>startQuiz(quiz.length,qRev,false)}>🔄 Rigioca</button>
-          <button style={S.soft()} onClick={()=>setScreen("quizPick")}>Cambia modalità</button>
-          <button style={S.soft()} onClick={()=>setScreen("home")}>← Torna alla Home</button>
+          <button style={S.btn()} onClick={()=>tvQuizMode?startTVQuiz(tvQuizMode):startQuiz(quiz.length,qRev,false)}>🔄 Rigioca</button>
+          <button style={S.soft()} onClick={()=>{if(tvQuizMode){setTvQuizMode(null);setScreen("tvQuizPick");}else setScreen("quizPick");}}>Cambia modalità</button>
+          <button style={S.soft()} onClick={()=>{setTvQuizMode(null);setScreen("home");}}>← Torna alla Home</button>
         </div>
-      </div></div>
+      </div></div>{overlays}</>
     );
   }
 
   // ── QUIZ ──────────────────────────────────────────────────────
   if(screen==="quiz"&&quiz){
     const q=quiz[qStep];
-    const question=qRev?q.it:q.en;
-    const speakQ=qRev?q.en:q.en;
+    const question=tvQuizMode?q.en:(qRev?q.it:q.en);
+    const speakQ=q.en;
+    const qLabel=tvQuizMode==='show'?"Di quale serie è questa frase?":tvQuizMode==='translate'?"Cosa vuol dire in italiano?":qRev?"Come si dice in inglese?":"Come si dice in italiano?";
     return(
       <div style={S.app}><div style={S.wrap}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px 0 12px"}}>
-          <button style={S.back} onClick={()=>setScreen("quizPick")}>← Modalità</button>
+          <button style={S.back} onClick={()=>tvQuizMode?setScreen("tvQuizPick"):setScreen("quizPick")}>← Modalità</button>
           <div style={{display:"flex",gap:8,alignItems:"center"}}>
             {qDaily&&<span style={{background:"rgba(255,111,0,0.2)",border:"1px solid #ff6f00",borderRadius:10,padding:"3px 8px",fontSize:11,color:"#ff6f00"}}>🔥 Sfida</span>}
             {qRev&&<span style={{background:"rgba(124,77,255,0.2)",border:"1px solid #7c4dff",borderRadius:10,padding:"3px 8px",fontSize:11,color:"#b39ddb"}}>⚡ Inverso</span>}
+            {tvQuizMode&&<span style={{background:"rgba(224,64,251,0.2)",border:"1px solid #e040fb",borderRadius:10,padding:"3px 8px",fontSize:11,color:"#e040fb"}}>🎬 TV</span>}
             <div style={{color:"#ffd54f",fontWeight:700}}>{qStep+1}/{quiz.length} · {qScore} ✅</div>
           </div>
         </div>
         <div style={S.bar}><div style={S.fill((qStep/quiz.length)*100)}/></div>
         <div style={{...S.center,padding:"24px 0 8px"}}>
-          <div style={S.muted}>{qRev?"Come si dice in inglese?":"Come si dice in italiano?"}</div>
-          <div style={{fontSize:28,fontWeight:800,marginTop:8,marginBottom:4,lineHeight:1.3}}>{question}</div>
-          <button onClick={()=>speak(speakQ)} style={S.spk}>🔊 Ascolta</button>
+          <div style={S.muted}>{qLabel}</div>
+          <div style={{fontSize:tvQuizMode?17:28,fontWeight:800,marginTop:8,marginBottom:4,lineHeight:1.4,fontStyle:tvQuizMode?"italic":"normal"}}>
+            {tvQuizMode?`"${question}"`:question}
+          </div>
+          {tvQuizMode!=='show'&&<button onClick={()=>speak(speakQ)} style={S.spk}>🔊 Ascolta</button>}
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:8}}>
           {q.options.map((opt,i)=>{
-            const val=qRev?opt.en:opt.it;
-            const correctVal=qRev?q.en:q.it;
-            const isCorrect=val===correctVal,isSel=qAns&&(qRev?qAns.en:qAns.it)===val;
+            let val,isCorrect,isSel;
+            if(tvQuizMode==='show'){
+              val=`${opt.showEmoji} ${opt.show}`;
+              isCorrect=opt.show===q.show;
+              isSel=qAns&&qAns.show===opt.show;
+            } else if(tvQuizMode==='translate'){
+              val=opt.it;
+              isCorrect=opt.it===q.it;
+              isSel=qAns&&qAns.it===opt.it;
+            } else {
+              val=qRev?opt.en:opt.it;
+              isCorrect=val===(qRev?q.en:q.it);
+              isSel=qAns&&(qRev?qAns.en:qAns.it)===val;
+            }
             let bg="rgba(255,255,255,0.06)",bd="rgba(255,255,255,0.12)";
             if(qAns){if(isCorrect){bg="rgba(76,175,80,0.3)";bd="#4caf50";}else if(isSel){bg="rgba(244,67,54,0.3)";bd="#f44336";}}
             return(<button key={i} onClick={()=>handleAns(opt)}
-              style={{background:bg,border:`2px solid ${bd}`,borderRadius:16,padding:"16px 8px",color:"#fff",fontSize:13,fontWeight:600,cursor:qAns?"default":"pointer",textAlign:"center",transition:"all 0.2s",lineHeight:1.4}}>
+              style={{background:bg,border:`2px solid ${bd}`,borderRadius:16,padding:"16px 8px",color:"#fff",fontSize:tvQuizMode==='show'?13:13,fontWeight:600,cursor:qAns?"default":"pointer",textAlign:"center",transition:"all 0.2s",lineHeight:1.4}}>
               {val}
             </button>);
           })}
         </div>
-      </div></div>
+      </div>{overlays}</div>
     );
   }
 
@@ -1009,7 +1105,7 @@ function App(){
             ?<button style={S.btn("linear-gradient(135deg,#e65100,#ff6f00)")} onClick={()=>{setProvI(i=>i+1);setProvWordI(0);setProvWordFlipped(false);}}>Prossimo proverbio →</button>
             :<button style={S.btn("linear-gradient(135deg,#2e7d32,#66bb6a)")} onClick={()=>{setScreen("home");setProvI(0);setProvWordI(0);setProvWordFlipped(false);}}>🌟 Completato!</button>}
         </div>
-      </div></div>
+      </div>{overlays}</div>
     );
   }
 
