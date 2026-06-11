@@ -199,6 +199,43 @@ const PROVERBS=[
      {en:"caress",it:"accarezzare",ex:"She caressed the crystal gently."},
      {en:"soul",it:"anima",ex:"Moonstone connects to your soul."},
    ]},
+  {en:"The father father of the water",
+   nap:"O patpa re l'acqu",
+   it:"Il padre padre dell'acqua (non lo so non ha molto senso in italiano)",
+   meaning:"Quando piove tanto, ma proprio tanto, ma proprio tantoooooo",
+   meaningEn:"When it rains a lot, but really a lot, but really a looooooot",
+   words:[
+     {en:"father",it:"padre",ex:"The father father of the water."},
+     {en:"water",it:"acqua",ex:"The water flows down the mountain."},
+   ]},
+  {en:"Neither the dogs!",
+   nap:"manc e can!",
+   it:"Neanche i cani!",
+   meaning:"Quando una persona di dice di fare qualcosa che non faresti mai, e tu rispondi 'neanche i cani!' per dire che è una cosa così brutta che neanche i cani la farebbero.",
+   meaningEn:"When someone tells you to do something you would never do, and you respond 'neanche i cani!' to say it's such a bad thing that not even dogs would do it.",
+   words:[
+     {en:"neither",it:"nemmeno",ex:"Neither the dogs!"},
+     {en:"dogs",it:"cani",ex:"Neither the dogs!"},
+   ]},
+  {en:"Who cries fucks who laughs",
+   nap:"Chi chiagne fott chi rir",
+   it:"Chi piange fotte chi ride",
+   meaning:"lamentarsi è spesso un metodo efficace per manipolare l'altrui pietà e ottenere ciò che si vuole, a scapito di chi vive con più dignità e silenzio.",
+   meaningEn:"complaining is often an effective method to manipulate others' pity and get what you want, at the expense of those who live with more dignity and silence.",
+   words:[
+     {en:"cries",it:"piange",ex:"Who cries fucks who laughs"},
+     {en:"laughs",it:"ride",ex:"Who cries fucks who laughs"},
+   ]},
+  {en:"You look like the pussy's sister",
+   nap:"Par a sor ra fess",
+   it:"Sembri la sorella della vagina",
+   meaning:"Viene utilizzata principalmente come insulto per definire una persona poco sveglia, stupida, sbadata o ridicola, con particolare riferimento alle donne (per gli uomini si usa la variante par o frat ro cazz, ovvero sembri il fratello del pene, ma questo ne parleremo più in là)",
+   meaningEn:"It is mainly used as an insult to define a person who is not very bright, stupid, careless or ridiculous, with particular reference to women (for men, the variant 'par o frat ro cazz' is used, meaning 'you look like the brother of the penis', but we will discuss this later)",
+   words:[
+     {en:"pussy",it:"vagina",ex:"You look like the pussy's sister(fun fact: pussy also means cat)"},
+     {en:"sister",it:"sorella",ex:"I have an annoying sister"},
+     {en:"to look like",it:"sembri",ex:"You look like you need a drink"},
+   ]},
 ];
 
 const LEVELS=[
@@ -224,7 +261,7 @@ const ACHIEVEMENTS=[
 ];
 
 const MOON=["🌑","🌒","🌓","🌔","🌕"];
-const NOTIF_MSGS=["Scus giovane! 🌙 Pronta per una lezione?","Luna & Letters ti aspetta! ✨ Quan sarapn salam e prosutt zij Nicol acop e zij Nicol a sott.","Buongiorno! 💎 Il cristallo di oggi ti aspetta.","È ora di studiare inglese! 🌸 La luna ti dà energia.AIII","Ciao! 🔮 Una nuova parola al giorno fa miracoli! come Kociack e maioe","Hey Emanuela! ⭐ Il tuo segno dice: te a mettr a frecc quand s gir!","La tua luna cresce! 🌒 quand s zapp e s pot zij Nicol nu ten nipot."];
+const NOTIF_MSGS=["Scus giovane ma na perzion e pataetin quand a puort? ✨ Quan sarapn salam e prosutt zij Nicol acop e zij Nicol a sott.","Signoraaa i limoniiii","comm Ann fatt lor ann fatt padron iesc for chest è 🌸 AIII","Una nuova parola al giorno fa miracoli! come Kociack e maioe","Hey Emanuela! ⭐ Il tuo segno dice: te a mettr a frecc quand s gir!","quand s zapp e s pot zij Nicol nu ten nipot."];
 function shuffle(a){return[...a].sort(()=>Math.random()-0.5);}
 function getLevel(xp){return LEVELS.find(l=>xp<l.max)||LEVELS[LEVELS.length-1];}
 function getLevelProgress(xp){
@@ -756,7 +793,7 @@ function App(){
               <span style={{fontFamily:SERIF,fontSize:23,fontWeight:600,lineHeight:1}}>Meme Napoletani</span>
               <span style={{background:"#f48fb1",color:"#2a0a1e",fontSize:9,fontWeight:800,letterSpacing:1,borderRadius:8,padding:"2px 7px"}}>NUOVO</span>
             </div>
-            <div style={{fontSize:11.5,color:"#c8a0c0",marginTop:3}}>{memes.length>0?`${memes.length} nella libreria · traduzioni in inglese`:"Ridi in napoletano, impara in inglese 🤌"}</div>
+            <div style={{fontSize:11.5,color:"#c8a0c0",marginTop:3}}>{memes.length>0?`${memes.length} nella libreria · traduzioni in inglese`:"Fozza Naboli"}</div>
           </div>
           <span style={{color:"#f48fb1",fontSize:18}}>›</span>
         </div>
