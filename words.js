@@ -574,6 +574,97 @@ const PROVERBS=[
    ]},
 ];
 
+// ── GRAMMATICA · esercizi tipo libro di scuola (ma divertenti!) ──────────────
+// Tipi di esercizio:
+//  fill    → scrivi la parola/verbo giusto nello spazio "___"
+//  choice  → scegli l'opzione corretta
+//  reorder → riordina le parole per formare la frase
+//  reading → leggi il testo e rispondi alle domande di comprensione
+const GRAMMAR=[
+  {
+    id:"present_simple",
+    emoji:"📺",
+    title:"Present Simple",
+    sub:"con Ginny & Georgia",
+    color:"#8e4585",
+    intro:"La regola d'oro 🌟 Alla 3ª persona singolare (he / she / it) il verbo prende la -s! She loves, he plays, it works. Con I / you / we / they il verbo resta normale.",
+    exercises:[
+      {type:"fill",q:"Ginny ___ reading at the Blue Farm café.",verb:"to love",hint:"amare · lei (3ª pers.)",answer:"loves",it:"Ginny ama leggere al Blue Farm café.",note:"She / he / it → il verbo prende la -s: love → loves. 💕"},
+      {type:"choice",q:"Georgia ___ a fresh start in Wellsbury.",options:["want","wants","wanting"],answer:"wants",it:"Georgia vuole un nuovo inizio a Wellsbury.",note:"Georgia = she → want + s = wants."},
+      {type:"fill",q:"I ___ to be a good friend to Max.",verb:"to try",hint:"cercare di · io (1ª pers.)",answer:"try",alts:["trie"],it:"Cerco di essere una buona amica per Max.",note:"Con 'I' niente -s: il verbo resta 'try'. La -s è solo per he/she/it!"},
+      {type:"choice",q:"Max and her friends ___ to the school dance.",options:["goes","go","gone"],answer:"go",it:"Max e le sue amiche vanno al ballo della scuola.",note:"'Max and her friends' = they → niente -s: go."},
+      {type:"reorder",tokens:["Georgia","loves","her","children"],answer:"Georgia loves her children",it:"Georgia ama i suoi figli.",note:"Ordine inglese: Soggetto + Verbo + Complemento. Sempre!"},
+      {type:"fill",q:"Austin ___ his video games every afternoon.",verb:"to play",hint:"giocare a · lui (3ª pers.)",answer:"plays",it:"Austin gioca ai suoi videogiochi ogni pomeriggio.",note:"play → plays. He = 3ª persona, quindi -s. 🎮"},
+      {type:"reading",title:"The new girl in town",emoji:"💅",
+        text:"Ginny is fifteen years old. She and her mother Georgia move to a small town called Wellsbury. Ginny is nervous because she is the new girl at school. On her first day she meets Maxine, a funny and friendly girl. Maxine introduces her to the group, and soon Ginny feels less alone. Georgia wants a fresh start and a better life for her family.",
+        questions:[
+          {q:"How old is Ginny?",options:["Fifteen","Thirteen","Eighteen"],answer:"Fifteen",note:"\"Ginny is fifteen years old.\" — la risposta è nella prima frase!"},
+          {q:"Why is Ginny nervous?",options:["She is the new girl at school","She lost her phone","She is sick"],answer:"She is the new girl at school",note:"\"...because she is the new girl at school.\" 'Because' = perché."},
+          {q:"What does Georgia want?",options:["A fresh start for her family","A new car","To leave Ginny"],answer:"A fresh start for her family",note:"\"Georgia wants a fresh start...\" 'Fresh start' = nuovo inizio."},
+        ]},
+    ],
+  },
+  {
+    id:"past_simple",
+    emoji:"⏳",
+    title:"Past Simple",
+    sub:"il passato in inglese",
+    color:"#6a1b9a",
+    intro:"Per parlare del passato 🕰️ ai verbi regolari aggiungi -ed: play → played, want → wanted. Ma molti verbi sono irregolari e cambiano del tutto: go → went, have → had, see → saw. Questi si imparano a memoria!",
+    exercises:[
+      {type:"fill",q:"Yesterday Ginny ___ to Marcus for hours.",verb:"to talk (regolare)",hint:"parlare · passato",answer:"talked",it:"Ieri Ginny ha parlato con Marcus per ore.",note:"Verbo regolare: talk + ed = talked. ✅"},
+      {type:"choice",q:"Last summer the Pogues ___ to a secret island.",options:["goed","went","gone"],answer:"went",it:"La scorsa estate i Pogues andarono su un'isola segreta.",note:"go è irregolare: go → went. 'goed' non esiste!"},
+      {type:"fill",q:"Georgia ___ a very difficult childhood.",verb:"to have (irregolare)",hint:"avere · passato",answer:"had",it:"Georgia ebbe un'infanzia molto difficile.",note:"have è irregolare: have → had. Niente -ed!"},
+      {type:"choice",q:"She ___ a beautiful dress to the dance.",options:["weared","wore","weart"],answer:"wore",it:"Indossò un vestito bellissimo al ballo.",note:"wear è irregolare: wear → wore. 👗"},
+      {type:"reorder",tokens:["We","watched","a","movie","together"],answer:"We watched a movie together",it:"Abbiamo guardato un film insieme.",note:"watch → watched (regolare). L'ordine resta Soggetto + Verbo + Complemento."},
+      {type:"fill",q:"Last night I ___ a strange dream about the moon.",verb:"to have (irregolare)",hint:"avere · passato · io",answer:"had",it:"La scorsa notte ho fatto uno strano sogno sulla luna.",note:"Al passato il verbo è uguale per tutti: I had, she had, they had. 🌙"},
+      {type:"reading",title:"A night to remember",emoji:"🌙",
+        text:"Last Friday there was a big party in Wellsbury. Ginny wore a new dress and Maxine did her makeup. They danced all night and laughed a lot. At the end of the party, Ginny saw Marcus near the door. He smiled at her and she felt happy. It was a night she never forgot.",
+        questions:[
+          {q:"When was the party?",options:["Last Friday","Last Monday","Yesterday morning"],answer:"Last Friday",note:"\"Last Friday there was a big party.\" 'Was' = era/c'era, passato di 'is'."},
+          {q:"Who did Ginny's makeup?",options:["Maxine","Georgia","Marcus"],answer:"Maxine",note:"\"Maxine did her makeup.\" do → did (irregolare)."},
+          {q:"How did Ginny feel when she saw Marcus?",options:["Happy","Angry","Bored"],answer:"Happy",note:"\"...she felt happy.\" feel → felt (irregolare)."},
+        ]},
+    ],
+  },
+  {
+    id:"comparatives",
+    emoji:"⚖️",
+    title:"Comparativi & Superlativi",
+    sub:"stronger · the strongest",
+    color:"#00695c",
+    intro:"Per confrontare 💪 agli aggettivi corti aggiungi -er e usa 'than': strong → stronger than. Per il superlativo: the strongest. Con gli aggettivi lunghi usi 'more' e 'the most': beautiful → more beautiful → the most beautiful.",
+    exercises:[
+      {type:"fill",q:"Ginny is ___ than she thinks.",verb:"strong → comparativo",hint:"più forte",answer:"stronger",it:"Ginny è più forte di quanto pensi.",note:"Aggettivo corto: strong + er = stronger. E si usa 'than' = di/che."},
+      {type:"choice",q:"Bridgerton is ___ romantic show I know.",options:["the more","the most","more"],answer:"the most",it:"Bridgerton è la serie più romantica che conosca.",note:"'romantic' è lungo → superlativo con 'the most'. 🌹"},
+      {type:"fill",q:"Today I am ___ than yesterday.",verb:"happy → comparativo",hint:"più felice",answer:"happier",it:"Oggi sono più felice di ieri.",note:"happy finisce in -y: la y diventa i → happier. 😊"},
+      {type:"choice",q:"Max is the ___ girl in the whole school.",options:["funnier","funniest","most funny"],answer:"funniest",it:"Max è la ragazza più divertente di tutta la scuola.",note:"funny → the funniest (superlativo). La y → i + est."},
+      {type:"reorder",tokens:["She","is","taller","than","her","brother"],answer:"She is taller than her brother",it:"Lei è più alta di suo fratello.",note:"Schema del comparativo: ... + aggettivo-er + than + ..."},
+      {type:"fill",q:"This crystal is the ___ thing I own.",verb:"beautiful → superlativo",hint:"la più bella · usa 'most'",answer:"most beautiful",alts:["beautifulest"],it:"Questo cristallo è la cosa più bella che possiedo.",note:"'beautiful' è lungo → the most beautiful. NON 'beautifulest'! 💎"},
+    ],
+  },
+  {
+    id:"reading_wellsbury",
+    emoji:"📖",
+    title:"Comprensione: A day in Wellsbury",
+    sub:"leggi & rispondi",
+    color:"#c2185b",
+    intro:"Leggi il testo con calma 📖 Non devi capire ogni singola parola: cerca le informazioni che ti servono per rispondere. Questo è il segreto per leggere in inglese senza ansia!",
+    exercises:[
+      {type:"reading",title:"A day in Wellsbury",emoji:"☀️",
+        text:"It is Friday morning in Wellsbury. Ginny wakes up early and gets ready for school. Her little brother Austin eats breakfast while Georgia drinks her coffee. Today is important: there is a big test at school and a town event in the evening. Ginny feels stressed, but Maxine sends her a funny message and she smiles. After school, the girls study together at the Blue Farm café. In the evening, the whole family goes to the event in the town square. For the first time in a long time, they feel like they belong somewhere.",
+        questions:[
+          {q:"What day is it in the story?",options:["Friday","Sunday","Wednesday"],answer:"Friday",note:"\"It is Friday morning in Wellsbury.\""},
+          {q:"What does Austin do in the morning?",options:["He eats breakfast","He goes to the test","He sends a message"],answer:"He eats breakfast",note:"\"...Austin eats breakfast...\" 'breakfast' = colazione. 🥞"},
+          {q:"Where do the girls study after school?",options:["At the Blue Farm café","At Ginny's house","In the town square"],answer:"At the Blue Farm café",note:"\"...the girls study together at the Blue Farm café.\""},
+          {q:"How does the family feel in the evening?",options:["Like they belong somewhere","Tired and sad","Angry with each other"],answer:"Like they belong somewhere",note:"\"...they feel like they belong somewhere.\" 'To belong' = appartenere. 💗"},
+        ]},
+      {type:"fill",q:"Before the test, Ginny feels ___ .",verb:"stressata (en)",hint:"cercala nel testo · inizia per s-",answer:"stressed",it:"Prima del test, Ginny si sente stressata.",note:"Nel testo: \"Ginny feels stressed\". 'Stressed' = stressata/o."},
+      {type:"choice",q:"In the story, what makes Ginny smile?",options:["A funny message from Maxine","A good grade","The town event"],answer:"A funny message from Maxine",it:"",note:"\"...Maxine sends her a funny message and she smiles.\" Le amiche aiutano sempre! 🌸"},
+    ],
+  },
+];
+
 const LEVELS=[
   {name:"Principiante",icon:"🌱",max:50},
   {name:"Esploratrice",icon:"🌿",max:150},
@@ -594,6 +685,7 @@ const ACHIEVEMENTS=[
   {id:"daily_done",icon:"📅",title:"Prima Sfida del Giorno!",desc:"Prima sfida quotidiana completata!"},
   {id:"master",icon:"👑",title:"Maestra!",desc:"Hai raggiunto il livello massimo — leggendaria!"},
   {id:"false_friend",icon:"🚨",title:"Amica dei False Friends!",desc:"Hai imparato i false friends più insidiosi!"},
+  {id:"grammar_done",icon:"📝",title:"Studentessa Modello!",desc:"Hai completato la tua prima lezione di grammatica!"},
 ];
 
 const MOON=["🌑","🌒","🌓","🌔","🌕"];

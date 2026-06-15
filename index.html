@@ -204,6 +204,16 @@ function App(){
   const[qDaily,setQDaily]=useState(false);
   const[tvQuizMode,setTvQuizMode]=useState(null);
 
+  // ── Grammatica ───────────────────────────────────────────────
+  const[gram,setGram]=useState(null);      // lista esercizi della lezione attiva
+  const[gLesson,setGLesson]=useState(null); // metadati lezione
+  const[gStep,setGStep]=useState(0);
+  const[gAns,setGAns]=useState(null);       // {correct, given} dopo il controllo
+  const[gScore,setGScore]=useState(0);
+  const[gDone,setGDone]=useState(false);
+  const[gInput,setGInput]=useState("");     // testo digitato (fill) o opzione scelta
+  const[gPicked,setGPicked]=useState([]);   // token scelti per il riordino
+
   // Welcome-back notification
   useEffect(()=>{
     const last=parseInt(LS('ll_lastVisit','0'));
@@ -396,6 +406,50 @@ function App(){
     },1300);
   }
 
+  // ── Grammatica ───────────────────────────────────────────────
+  function normAns(s){return String(s||"").toLowerCase().trim().replace(/\s+/g," ").replace(/[.!?,]+$/,"");}
+
+  function startGrammar(lesson){
+    const items=[];
+    lesson.exercises.forEach(ex=>{
+      if(ex.type==="reading"){
+        ex.questions.forEach((qq,i)=>items.push({type:"reading",passage:ex.text,passageTitle:ex.title,passageEmoji:ex.emoji,first:i===0,...qq}));
+      } else if(ex.type==="reorder"){
+        items.push({...ex,scrambled:shuffle(ex.tokens)});
+      } else items.push(ex);
+    });
+    setGram(items);setGLesson(lesson);setGStep(0);setGScore(0);setGAns(null);setGDone(false);setGInput("");setGPicked([]);
+    setScreen("grammar");
+  }
+
+  function submitGrammar(value){
+    if(gAns) return;
+    const ex=gram[gStep];
+    let correct;
+    if(ex.type==="fill"){
+      const ok=[ex.answer,...(ex.alts||[])].map(normAns);
+      correct=ok.includes(normAns(value));
+    } else if(ex.type==="reorder"){
+      correct=normAns(value)===normAns(ex.answer);
+    } else { // choice / reading
+      correct=value===ex.answer;
+    }
+    setGAns({correct,given:value});
+    if(correct){setGScore(s=>s+1);addXP(10);markStudied();}
+    playSound(correct);
+  }
+
+  function nextGrammar(){
+    if(gStep+1>=gram.length){
+      const perfect=gScore===gram.length;
+      setGDone(true);
+      setTimeout(()=>unlockAch('grammar_done'),300);
+      if(perfect){setShowFlash(true);setTimeout(()=>setShowFlash(false),900);}
+    } else {
+      setGStep(s=>s+1);setGAns(null);setGInput("");setGPicked([]);
+    }
+  }
+
   function resetProgress(){
     ['ll_xp','ll_learned','ll_streak','ll_lastStudy','ll_ach','ll_daily'].forEach(k=>{try{localStorage.removeItem(k);}catch{}});
     setXp(0);setLearned(new Set());setStreak(0);setLastStudy('');setAchievements(new Set());setDailyDone(false);setShowReset(false);
@@ -581,6 +635,7 @@ function App(){
           {id:"facts",icon:"🌊",label:"Fun Facts",sub:"21 temi · False Friends",done:fDone,total:fW.length},
           {id:"tv",icon:"📺",label:"Serie TV",sub:`${tDone} frasi · 7 serie`},
           {id:"quizPick",icon:"🎮",label:"Quiz & Sfide",sub:"Normale · Inverso · Sfida"},
+          {id:"grammarPick",icon:"📝",label:"Grammatica",sub:`${GRAMMAR.length} lezioni · scrivi, scegli, leggi`},
           {id:"achievements",icon:"🏆",label:"I Tuoi Badge",sub:`${achievements.size}/${ACHIEVEMENTS.length} sbloccati`,done:achievements.size,total:ACHIEVEMENTS.length},
         ].map(sec=>(
           <div key={sec.id} onClick={()=>setScreen(sec.id)} style={{border:"1px solid rgba(244,143,177,0.22)",background:"rgba(244,143,177,0.05)",borderRadius:24,padding:"17px 16px",cursor:"pointer"}}>
@@ -1089,6 +1144,166 @@ function App(){
           })}
         </div>
       </div>{overlays}</div>
+    );
+  }
+
+  // ── GRAMMATICA · SCELTA LEZIONE ───────────────────────────────
+  if(screen==="grammarPick") return(
+    <div style={S.app}><div style={S.wrap}>
+      <button style={S.back} onClick={()=>setScreen("home")}>← Home</button>
+      <div style={{...S.center,padding:"16px 0 22px"}}>
+        <div style={{fontSize:44}}>📝</div>
+        <div style={{...S.gtxt,marginTop:4}}>Grammatica</div>
+        <div style={{...S.muted,marginTop:4}}>Esercizi come a scuola, ma con le tue serie preferite ✨</div>
+      </div>
+      <div style={{display:"flex",flexDirection:"column",gap:14}}>
+        {GRAMMAR.map(les=>(
+          <div key={les.id} onClick={()=>startGrammar(les)} style={S.card({background:`linear-gradient(135deg,${les.color}55,${les.color}22)`,borderColor:`${les.color}77`,cursor:"pointer",marginBottom:0})}>
+            <div style={{display:"flex",alignItems:"center",gap:13}}>
+              <div style={{fontSize:30}}>{les.emoji}</div>
+              <div style={{flex:1}}>
+                <div style={{fontFamily:SERIF,fontSize:22,fontWeight:600,lineHeight:1.1}}>{les.title}</div>
+                <div style={{fontSize:11.5,color:"#e3bcd6",marginTop:2}}>{les.sub} · {les.exercises.length} esercizi</div>
+              </div>
+              <span style={{color:"#f48fb1",fontSize:18}}>›</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{marginTop:18,border:"1px dashed rgba(244,143,177,0.3)",borderRadius:18,padding:"14px 16px",fontSize:11.5,color:"#c8a0c0",lineHeight:1.7,textAlign:"center"}}>✍️ Scrivi la parola giusta · ✅ scegli l'opzione · 🔀 riordina la frase · 📖 leggi e rispondi · +10 XP per risposta</div>
+    </div>{overlays}</div>
+  );
+
+  // ── GRAMMATICA · LEZIONE COMPLETATA ───────────────────────────
+  if(screen==="grammar"&&gDone){
+    const total=gram.length,score=gScore;
+    return(
+      <><div style={S.app}><div style={{...S.wrap,...S.center,paddingTop:60,animation:"fadeIn 0.4s ease"}}>
+        <div style={{fontSize:72,marginBottom:12,animation:"pop 0.4s ease"}}>{score>=total*0.8?"🏆":score>=total*0.5?"🌟":"💪"}</div>
+        <div style={{...S.gtxt,fontSize:26,marginBottom:8}}>{score}/{total} corrette!</div>
+        <div style={{...S.muted,fontSize:15,marginBottom:8}}>
+          {score===total?"Perfetta! Hai capito tutto! 🌕":score>=total*0.8?"Ottimo lavoro! Quasi perfetta!":score>=total*0.5?"Bene! Rileggi le spiegazioni e riprova!":"Niente paura — la grammatica si impara piano piano!"}
+        </div>
+        <div style={{fontSize:22,color:"#ffd54f",marginBottom:24}}>+{score*10} XP guadagnati!</div>
+        <div style={{display:"flex",flexDirection:"column",gap:12,alignItems:"center",marginTop:16}}>
+          <button style={S.btn()} onClick={()=>startGrammar(gLesson)}>🔄 Rifai la lezione</button>
+          <button style={S.soft()} onClick={()=>setScreen("grammarPick")}>📝 Altre lezioni</button>
+          <button style={S.soft()} onClick={()=>setScreen("home")}>← Torna alla Home</button>
+        </div>
+      </div></div>{overlays}</>
+    );
+  }
+
+  // ── GRAMMATICA · ESERCIZIO ────────────────────────────────────
+  if(screen==="grammar"&&gram){
+    const ex=gram[gStep];
+    const typeLabel={fill:"✍️ Scrivi la parola giusta",choice:"✅ Scegli l'opzione corretta",reorder:"🔀 Riordina la frase",reading:"📖 Leggi e rispondi"}[ex.type];
+    const qText=(ex.q||"").split("___");
+    return(
+      <><div style={S.app}><div style={S.wrap}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px 0 12px"}}>
+          <button style={S.back} onClick={()=>setScreen("grammarPick")}>← Lezioni</button>
+          <div style={{color:"#ffd54f",fontWeight:700}}>{gStep+1}/{gram.length} · {gScore} ✅</div>
+        </div>
+        <div style={S.bar}><div style={S.fill((gStep/gram.length)*100)}/></div>
+
+        {gStep===0&&gLesson&&!gAns&&(
+          <div style={{border:`1px solid ${gLesson.color}77`,background:`linear-gradient(135deg,${gLesson.color}33,transparent)`,borderRadius:18,padding:"13px 16px",margin:"10px 0 4px",fontSize:12.5,color:"#f3e1ee",lineHeight:1.7}}>{gLesson.intro}</div>
+        )}
+
+        <div style={{...S.muted,marginTop:14,marginBottom:6}}>{typeLabel}</div>
+
+        {/* Testo di lettura */}
+        {ex.type==="reading"&&(
+          <div style={{border:"1px solid rgba(244,143,177,0.3)",background:"rgba(244,143,177,0.06)",borderRadius:18,padding:"16px 18px",marginBottom:14}}>
+            <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:9}}>
+              <span style={{fontSize:16}}>{ex.passageEmoji||"📖"}</span>
+              <span style={{fontSize:10,letterSpacing:2,textTransform:"uppercase",color:"#e3a7c8"}}>{ex.passageTitle}</span>
+              <button onClick={()=>speak(ex.passage)} style={{...S.spk,margin:0,marginLeft:"auto",padding:"4px 12px",fontSize:11}}>🔊</button>
+            </div>
+            <div style={{fontFamily:SERIF,fontSize:16.5,lineHeight:1.85,color:"#fdf3f8"}}>{ex.passage}</div>
+          </div>
+        )}
+
+        {/* Domanda / frase */}
+        <div style={{fontSize:ex.type==="reorder"?17:20,fontWeight:700,lineHeight:1.6,marginBottom:14}}>
+          {ex.type==="fill"
+            ? <span>{qText[0]}<span style={{borderBottom:"2px dashed #f48fb1",padding:"0 22px",margin:"0 4px",color:"#ffd54f"}}>{gAns?gAns.given||"___":"___"}</span>{qText[1]}</span>
+            : (ex.type==="reorder" ? "Riordina le parole per formare la frase:" : ex.q)}
+        </div>
+
+        {/* Aiuto per il fill */}
+        {ex.type==="fill"&&(
+          <div style={{...S.muted,fontSize:12.5,marginTop:-6,marginBottom:14}}>💡 {ex.verb} — <span style={{color:"#e3bcd6"}}>{ex.hint}</span></div>
+        )}
+
+        {/* INPUT · fill */}
+        {ex.type==="fill"&&(
+          <div>
+            <input value={gInput} onChange={e=>setGInput(e.target.value)} disabled={!!gAns}
+              onKeyDown={e=>{if(e.key==="Enter"&&gInput.trim()&&!gAns)submitGrammar(gInput);}}
+              placeholder="Scrivi qui la risposta…" autoCapitalize="none" autoCorrect="off"
+              style={{width:"100%",boxSizing:"border-box",background:"rgba(255,255,255,0.06)",border:`2px solid ${gAns?(gAns.correct?"#4caf50":"#f44336"):"rgba(244,143,177,0.4)"}`,borderRadius:16,padding:"14px 16px",color:"#fff",fontSize:17,outline:"none",textAlign:"center",fontFamily:SERIF}}/>
+            {!gAns&&<button onClick={()=>submitGrammar(gInput)} disabled={!gInput.trim()} style={{...S.btn(),width:"100%",marginTop:12,opacity:gInput.trim()?1:0.4}}>Controlla</button>}
+          </div>
+        )}
+
+        {/* OPZIONI · choice / reading */}
+        {(ex.type==="choice"||ex.type==="reading")&&(
+          <div style={{display:"flex",flexDirection:"column",gap:11}}>
+            {ex.options.map((opt,i)=>{
+              const isCorrect=opt===ex.answer,isSel=gAns&&gAns.given===opt;
+              let bg="rgba(255,255,255,0.06)",bd="rgba(255,255,255,0.14)";
+              if(gAns){if(isCorrect){bg="rgba(76,175,80,0.3)";bd="#4caf50";}else if(isSel){bg="rgba(244,67,54,0.3)";bd="#f44336";}}
+              return(<button key={i} onClick={()=>submitGrammar(opt)} disabled={!!gAns}
+                style={{background:bg,border:`2px solid ${bd}`,borderRadius:16,padding:"15px 16px",color:"#fff",fontSize:15,fontWeight:600,cursor:gAns?"default":"pointer",textAlign:"left",transition:"all 0.2s",lineHeight:1.4}}>
+                {opt}{gAns&&isCorrect&&" ✅"}{gAns&&isSel&&!isCorrect&&" ❌"}
+              </button>);
+            })}
+          </div>
+        )}
+
+        {/* RIORDINO · reorder */}
+        {ex.type==="reorder"&&(
+          <div>
+            <div style={{minHeight:54,border:`2px solid ${gAns?(gAns.correct?"#4caf50":"#f44336"):"rgba(244,143,177,0.4)"}`,borderRadius:16,padding:"10px 12px",marginBottom:12,display:"flex",flexWrap:"wrap",gap:8,alignItems:"center",background:"rgba(255,255,255,0.04)"}}>
+              {gPicked.length===0&&<span style={{...S.muted,fontSize:13}}>Tocca le parole nell'ordine giusto 👇</span>}
+              {gPicked.map((tok,i)=>(
+                <button key={i} onClick={()=>{if(!gAns)setGPicked(p=>p.filter((_,j)=>j!==i));}} disabled={!!gAns}
+                  style={{background:"rgba(244,143,177,0.2)",border:"1px solid rgba(244,143,177,0.5)",borderRadius:12,padding:"7px 13px",color:"#fff",fontSize:15,cursor:gAns?"default":"pointer"}}>{tok}</button>
+              ))}
+            </div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:8,justifyContent:"center"}}>
+              {ex.scrambled.map((tok,i)=>{
+                // un token sorgente è "usato" se la sua occorrenza è già tra quelle scelte
+                const usedCount=gPicked.filter(t=>t===tok).length;
+                const sameBefore=ex.scrambled.slice(0,i).filter(t=>t===tok).length;
+                const isUsed=sameBefore<usedCount;
+                return(<button key={i} onClick={()=>{if(!gAns&&!isUsed)setGPicked(p=>[...p,tok]);}} disabled={!!gAns||isUsed}
+                  style={{background:isUsed?"rgba(255,255,255,0.04)":"rgba(255,255,255,0.1)",border:"1px solid rgba(255,255,255,0.2)",borderRadius:12,padding:"9px 14px",color:isUsed?"rgba(255,255,255,0.25)":"#fff",fontSize:15,cursor:gAns||isUsed?"default":"pointer"}}>{tok}</button>);
+              })}
+            </div>
+            {!gAns&&<div style={{display:"flex",gap:10,marginTop:14}}>
+              <button onClick={()=>setGPicked([])} disabled={gPicked.length===0} style={{...S.soft(),flex:1,opacity:gPicked.length?1:0.4}}>↺ Cancella</button>
+              <button onClick={()=>submitGrammar(gPicked.join(" "))} disabled={gPicked.length===0} style={{...S.btn(),flex:1.4,opacity:gPicked.length?1:0.4}}>Controlla</button>
+            </div>}
+          </div>
+        )}
+
+        {/* FEEDBACK + spiegazione */}
+        {gAns&&(
+          <div style={{marginTop:16,border:`1px solid ${gAns.correct?"rgba(76,175,80,0.5)":"rgba(244,67,54,0.5)"}`,background:gAns.correct?"rgba(76,175,80,0.12)":"rgba(244,67,54,0.1)",borderRadius:18,padding:"15px 17px",animation:"fadeIn 0.3s ease"}}>
+            <div style={{fontWeight:800,fontSize:15,color:gAns.correct?"#b7e4c7":"#ef9a9a",marginBottom:6}}>{gAns.correct?"✅ Giusto! +10 XP":"❌ Quasi!"}</div>
+            {!gAns.correct&&(ex.type==="fill"||ex.type==="reorder")&&(
+              <div style={{fontSize:14,color:"#fff",marginBottom:6}}>Risposta corretta: <b style={{color:"#ffd54f"}}>{ex.answer}</b></div>
+            )}
+            {ex.it&&<div style={{fontSize:13.5,color:"#f3e1ee",fontStyle:"italic",lineHeight:1.6,marginBottom:ex.note?6:0}}>🇮🇹 {ex.it}</div>}
+            {ex.note&&<div style={{fontSize:12.5,color:"#c8a0c0",lineHeight:1.65}}>💡 {ex.note}</div>}
+            <button onClick={nextGrammar} style={{...S.btn(),width:"100%",marginTop:13}}>{gStep+1>=gram.length?"🏁 Vedi il risultato":"Continua →"}</button>
+          </div>
+        )}
+        <div style={{height:24}}/>
+      </div></div>{overlays}</>
     );
   }
 
