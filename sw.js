@@ -1,4 +1,4 @@
-const CACHE = "luna-letters-v8";
+const CACHE = "luna-letters-v9";
 const ASSETS = ["./", "./index.html"];
 
 self.addEventListener("install", e =>

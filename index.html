@@ -214,6 +214,14 @@ function App(){
   const[gInput,setGInput]=useState("");     // testo digitato (fill) o opzione scelta
   const[gPicked,setGPicked]=useState([]);   // token scelti per il riordino
 
+  // ── Pronuncia (voice) ────────────────────────────────────────
+  const[voicePool,setVoicePool]=useState(null); // lista frasi da ripetere
+  const[voiceI,setVoiceI]=useState(0);
+  const[voiceListening,setVoiceListening]=useState(false);
+  const[voiceResult,setVoiceResult]=useState(null); // {words,accuracy,matched,total,passed,transcript}
+  const[voiceErr,setVoiceErr]=useState("");
+  const voiceRec=useRef(null);
+
   // Welcome-back notification
   useEffect(()=>{
     const last=parseInt(LS('ll_lastVisit','0'));
@@ -342,6 +350,65 @@ function App(){
     r.onerror=()=>setListening(false);
     r.onend=()=>setListening(false);
     r.start();
+  }
+
+  // ── Pronuncia · esercizi vocali ──────────────────────────────
+  function normVoice(s){return String(s||"").toLowerCase().replace(/[^a-z0-9'\s]/g," ").replace(/\s+/g," ").trim();}
+
+  // confronta ciò che è stato detto con la frase target, parola per parola
+  function scoreVoice(said,target){
+    const t=normVoice(target).split(" ").filter(Boolean);
+    const heard=normVoice(said).split(" ").filter(Boolean);
+    const pool=[...heard];
+    let matched=0;
+    const words=t.map(w=>{
+      const i=pool.indexOf(w);
+      if(i>=0){pool.splice(i,1);matched++;return{w,ok:true};}
+      return{w,ok:false};
+    });
+    const accuracy=t.length?Math.round(matched/t.length*100):0;
+    return{words,accuracy,matched,total:t.length,passed:accuracy>=80};
+  }
+
+  function startVoice(){
+    const all=[];
+    TV.forEach(s=>s.phrases.forEach(p=>all.push({en:p.en,it:p.it,note:p.note,show:s.show,emoji:s.emoji})));
+    setVoicePool(shuffle(all));
+    setVoiceI(0);setVoiceResult(null);setVoiceErr("");setVoiceListening(false);
+    setScreen("voice");
+  }
+
+  function checkVoice(){
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    if(!SR){setVoiceErr("Il microfono non è supportato qui. Prova con Chrome o Safari! 🎤");return;}
+    if(!voicePool||!voicePool[voiceI])return;
+    const target=voicePool[voiceI];
+    const r=new SR();
+    voiceRec.current=r;
+    r.lang="en-US";r.interimResults=false;r.maxAlternatives=5;
+    setVoiceErr("");setVoiceResult(null);setVoiceListening(true);
+    r.onresult=e=>{
+      const res=e.results[0];
+      let best=null;
+      for(let i=0;i<res.length;i++){
+        const sc=scoreVoice(res[i].transcript,target.en);
+        if(!best||sc.accuracy>best.accuracy)best={...sc,transcript:res[i].transcript};
+      }
+      setVoiceListening(false);
+      setVoiceResult(best);
+      if(best.passed){addXP(10);markStudied();learnWord(target.en);}
+      playSound(best.passed);
+      if(best.accuracy===100){setShowFlash(true);setTimeout(()=>setShowFlash(false),900);}
+    };
+    r.onerror=ev=>{setVoiceListening(false);setVoiceErr(ev.error==="not-allowed"||ev.error==="service-not-allowed"?"Permesso microfono negato — abilitalo nelle impostazioni del browser. 🎤":"Non ho sentito bene — riprova! 🎤");};
+    r.onend=()=>setVoiceListening(false);
+    try{r.start();}catch{setVoiceListening(false);}
+  }
+
+  function nextVoice(){
+    try{voiceRec.current&&voiceRec.current.abort();}catch{}
+    setVoiceResult(null);setVoiceErr("");setVoiceListening(false);
+    setVoiceI(i=>i+1);
   }
 
   function doFlip(setFlip,setFlipAnim,cb){
@@ -650,6 +717,17 @@ function App(){
           <div style={{flex:1}}>
             <div style={{fontFamily:SERIF,fontSize:21,fontWeight:600,lineHeight:1.1}}>Detti Napoletani in Inglese</div>
             <div style={{fontSize:11.5,color:"#c8a0c0",marginTop:2}}>{PROVERBS.length} proverbi · 🗺️ nap · 🇮🇹 it · 🇬🇧 en</div>
+          </div>
+          <span style={{color:"#a06a96",fontSize:17}}>›</span>
+        </div>
+        <div onClick={startVoice} style={{gridColumn:"1 / -1",border:"1px solid rgba(129,212,250,0.45)",background:"radial-gradient(circle at 15% 0%,rgba(129,212,250,0.18),rgba(244,143,177,0.05) 70%)",borderRadius:24,padding:"15px 18px",display:"flex",alignItems:"center",gap:14,cursor:"pointer"}}>
+          <div style={{fontSize:28}}>🎤</div>
+          <div style={{flex:1}}>
+            <div style={{display:"flex",alignItems:"center",gap:9,flexWrap:"wrap"}}>
+              <span style={{fontFamily:SERIF,fontSize:21,fontWeight:600,lineHeight:1.1}}>Esercizi di Pronuncia</span>
+              <span style={{background:"#81d4fa",color:"#06283d",fontSize:9,fontWeight:800,letterSpacing:1,borderRadius:8,padding:"2px 7px"}}>NUOVO</span>
+            </div>
+            <div style={{fontSize:11.5,color:"#c8a0c0",marginTop:2}}>Ripeti la frase e Luna controlla la pronuncia · 🎤</div>
           </div>
           <span style={{color:"#a06a96",fontSize:17}}>›</span>
         </div>
@@ -1363,6 +1441,86 @@ function App(){
             :<button style={S.btn("linear-gradient(135deg,#2e7d32,#66bb6a)")} onClick={()=>{setScreen("home");setProvI(0);setProvWordI(0);setProvWordFlipped(false);}}>🌟 Completato!</button>}
         </div>
       </div>{overlays}</div>
+    );
+  }
+
+  // ── PRONUNCIA · esercizi vocali ──────────────────────────────
+  if(screen==="voice"&&voicePool){
+    const done=voiceI>=voicePool.length;
+    if(done){
+      return(
+        <><div style={S.app}><div style={{...S.wrap,...S.center,paddingTop:60,animation:"fadeIn 0.4s ease"}}>
+          <div style={{fontSize:72,marginBottom:12,animation:"pop 0.4s ease"}}>🎉</div>
+          <div style={{...S.gtxt,fontSize:26,marginBottom:8}}>Hai finito tutte le frasi!</div>
+          <div style={{...S.muted,fontSize:15,marginBottom:24}}>Bravissima Emanuela! La tua pronuncia migliora ogni volta 🌙</div>
+          <div style={{display:"flex",flexDirection:"column",gap:12,alignItems:"center"}}>
+            <button style={S.btn()} onClick={startVoice}>🔄 Ricomincia</button>
+            <button style={S.soft()} onClick={()=>setScreen("home")}>← Torna alla Home</button>
+          </div>
+        </div></div>{overlays}</>
+      );
+    }
+    const ph=voicePool[voiceI];
+    const r=voiceResult;
+    return(
+      <><div style={S.app}><div style={S.wrap}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"20px 0 12px"}}>
+          <button style={{...S.back,marginBottom:0}} onClick={()=>setScreen("home")}>← Home</button>
+          <div style={{color:"#ffd54f",fontWeight:700}}>{voiceI+1}/{voicePool.length}</div>
+        </div>
+        <div style={S.bar}><div style={S.fill((voiceI/voicePool.length)*100)}/></div>
+
+        <div style={{...S.center,padding:"18px 0 6px"}}>
+          <div style={{fontSize:40}}>🎤</div>
+          <div style={{...S.gtxt,fontSize:28}}>Ripeti la frase</div>
+          <div style={{...S.muted,marginTop:2}}>{ph.emoji} {ph.show} · ascolta e poi parla in inglese</div>
+        </div>
+
+        {/* La frase da ripetere */}
+        <div style={S.card({background:"linear-gradient(135deg,#37003044,#1b5e2033)",borderColor:"rgba(129,212,250,0.4)",...S.center,padding:24,marginTop:10})}>
+          <div style={{fontSize:21,fontWeight:800,lineHeight:1.5,marginBottom:6}}>"{ph.en}"</div>
+          <div style={{fontSize:14,color:"#b7e4c7",marginBottom:10}}>{ph.it}</div>
+          <button onClick={()=>speak(ph.en)} style={S.spk}>🔊 Ascolta</button>
+        </div>
+
+        {/* Pulsante microfono */}
+        {!r&&(
+          <button onClick={checkVoice} disabled={voiceListening}
+            style={{width:"100%",marginTop:18,border:`2px solid ${voiceListening?"#f44336":"#81d4fa"}`,background:voiceListening?"rgba(244,67,54,0.18)":"rgba(129,212,250,0.12)",borderRadius:20,padding:"18px",color:"#fff",fontSize:16,fontWeight:700,cursor:voiceListening?"default":"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:10}}>
+            <span style={{fontSize:24,animation:voiceListening?"pulse 1s infinite":"none"}}>🎤</span>
+            {voiceListening?"Sto ascoltando… parla ora!":"Tocca e ripeti la frase"}
+          </button>
+        )}
+
+        {voiceErr&&<div style={{marginTop:14,border:"1px solid rgba(255,171,145,0.5)",background:"rgba(255,111,0,0.12)",borderRadius:16,padding:"13px 16px",fontSize:13,color:"#ffab91",lineHeight:1.6,textAlign:"center"}}>{voiceErr}</div>}
+
+        {/* Risultato */}
+        {r&&(
+          <div style={{marginTop:18,border:`1px solid ${r.passed?"rgba(76,175,80,0.5)":"rgba(255,171,145,0.5)"}`,background:r.passed?"rgba(76,175,80,0.12)":"rgba(255,111,0,0.1)",borderRadius:20,padding:"17px 18px",animation:"fadeIn 0.3s ease"}}>
+            <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12}}>
+              <span style={{fontSize:30}}>{r.accuracy===100?"🏆":r.passed?"✅":"💪"}</span>
+              <div>
+                <div style={{fontWeight:800,fontSize:16,color:r.passed?"#b7e4c7":"#ffcc80"}}>{r.accuracy===100?"Perfetta!":r.passed?"Ottimo! Ci sei quasi!":"Riprova — ci stai arrivando!"}</div>
+                <div style={{...S.muted,fontSize:12}}>Pronuncia: {r.accuracy}% · {r.matched}/{r.total} parole {r.passed?"· +10 XP":""}</div>
+              </div>
+            </div>
+            <div style={{...S.muted,fontSize:10,letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>La frase, parola per parola</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:7,marginBottom:12}}>
+              {r.words.map((wd,i)=>(
+                <span key={i} style={{background:wd.ok?"rgba(76,175,80,0.25)":"rgba(244,67,54,0.2)",border:`1px solid ${wd.ok?"#4caf50":"#f44336"}`,borderRadius:10,padding:"5px 11px",fontSize:14,color:"#fff"}}>{wd.ok?"✓":"✕"} {wd.w}</span>
+              ))}
+            </div>
+            <div style={{...S.muted,fontSize:12,lineHeight:1.6,marginBottom:14}}>👂 Ho sentito: <span style={{color:"#e3bcd6",fontStyle:"italic"}}>"{r.transcript||"…"}"</span></div>
+            <div style={{display:"flex",gap:10}}>
+              <button onClick={()=>{setVoiceResult(null);setVoiceErr("");}} style={{...S.soft(),flex:1}}>🔁 Riprova</button>
+              <button onClick={nextVoice} style={{...S.btn(),flex:1.4}}>{voiceI+1>=voicePool.length?"🏁 Fine":"Prossima frase →"}</button>
+            </div>
+          </div>
+        )}
+
+        <div style={{marginTop:18,border:"1px dashed rgba(244,143,177,0.3)",borderRadius:18,padding:"13px 16px",fontSize:11.5,color:"#c8a0c0",lineHeight:1.7,textAlign:"center"}}>🎧 Funziona meglio con le cuffie in un posto silenzioso · serve il permesso del microfono</div>
+        <div style={{height:24}}/>
+      </div></div>{overlays}</>
     );
   }
 
