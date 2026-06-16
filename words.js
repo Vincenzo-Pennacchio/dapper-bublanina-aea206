@@ -11,7 +11,7 @@ const CRYSTALS=[
     {en:"illuminate",it:"illuminare",ex:"Let the truth illuminate your path."},
     {en:"sacred",it:"sacro",ex:"This place feels deeply sacred."},
   ]},
-  {name:"Topaz",it:"Topazio",emoji:"✨",lunar:"Il topazio si carica con la luna crescente — mettilo sul davanzale quando la luna inizia a crescere.",lunarEn:"Topaz charges with the waxing moon — put it on the windowsill as the moon starts to grow.",words:[
+  {name:"Topaz",it:"Topazio",emoji:"✨",lunar:"Il topazio si carica con la luna crescente  mettilo sul davanzale quando la luna inizia a crescere.",lunarEn:"Topaz charges with the waxing moon  put it on the windowsill as the moon starts to grow.",words:[
     {en:"strength",it:"forza",ex:"Topaz gives you inner strength."},
     {en:"clarity",it:"chiarezza",ex:"Find clarity with this stone."},
     {en:"energy",it:"energia",ex:"Feel the energy of topaz."},
@@ -35,7 +35,7 @@ const CRYSTALS=[
     {en:"soothe",it:"calmare",ex:"This crystal helps soothe anxiety."},
     {en:"restful",it:"riposante",ex:"I had the most restful sleep ever."},
   ]},
-  {name:"Rose Quartz",it:"Quarzo Rosa",emoji:"🌸",lunar:"Il quarzo rosa si potenzia sotto la luna in Bilancia o Toro — attira l'amore e l'armonia.",lunarEn:"Rose quartz amplifies under the Libra or Taurus moon — it attracts love and harmony.",words:[
+  {name:"Rose Quartz",it:"Quarzo Rosa",emoji:"🌸",lunar:"Il quarzo rosa si potenzia sotto la luna in Bilancia o Toro  attira l'amore e l'armonia.",lunarEn:"Rose quartz amplifies under the Libra or Taurus moon  it attracts love and harmony.",words:[
     {en:"love",it:"amore",ex:"Rose quartz attracts love."},
     {en:"gentle",it:"gentile",ex:"The energy is very gentle."},
     {en:"heart",it:"cuore",ex:"It opens your heart."},
@@ -59,7 +59,7 @@ const CRYSTALS=[
     {en:"pearl",it:"perla",ex:"The stone shines like a pearl."},
     {en:"enchanting",it:"incantevole",ex:"The moonstone is truly enchanting."},
   ]},
-  {name:"Citrine",it:"Citrino",emoji:"🌟",lunar:"Il citrino si carica con la luna nuova — è il momento perfetto per fissare nuove intenzioni di prosperità.",lunarEn:"Citrine charges with the new moon — the perfect time to set new intentions of prosperity.",words:[
+  {name:"Citrine",it:"Citrino",emoji:"🌟",lunar:"Il citrino si carica con la luna nuova  è il momento perfetto per fissare nuove intenzioni di prosperità.",lunarEn:"Citrine charges with the new moon  the perfect time to set new intentions of prosperity.",words:[
     {en:"abundance",it:"abbondanza",ex:"Citrine attracts abundance."},
     {en:"prosperity",it:"prosperità",ex:"Feel the energy of prosperity."},
     {en:"sunny",it:"soleggiato",ex:"Citrine has a sunny warm energy."},
@@ -83,7 +83,7 @@ const CRYSTALS=[
     {en:"powerful",it:"potente",ex:"This is a very powerful crystal."},
     {en:"purify",it:"purificare",ex:"Use obsidian to purify your space."},
   ]},
-  {name:"Tiger's Eye",it:"Occhio di Tigre",emoji:"🐯",lunar:"L'occhio di tigre si potenzia con la luna crescente — porta coraggio nei momenti più difficili.",lunarEn:"Tiger's eye amplifies with the waxing moon — it brings courage in the hardest moments.",words:[
+  {name:"Tiger's Eye",it:"Occhio di Tigre",emoji:"🐯",lunar:"L'occhio di tigre si potenzia con la luna crescente  porta coraggio nei momenti più difficili.",lunarEn:"Tiger's eye amplifies with the waxing moon  it brings courage in the hardest moments.",words:[
     {en:"courage",it:"coraggio",ex:"Have the courage to be yourself."},
     {en:"focus",it:"concentrazione",ex:"Tiger's eye improves your focus."},
     {en:"bold",it:"audace",ex:"Be bold and fearless today."},
@@ -95,7 +95,7 @@ const CRYSTALS=[
     {en:"warrior",it:"guerriero / guerriera",ex:"She is a true warrior of light."},
     {en:"tenacious",it:"tenace",ex:"She is the most tenacious person I know."},
   ]},
-  {name:"Selenite",it:"Selenite",emoji:"🤍",lunar:"La selenite è l'unica pietra che non ha bisogno di essere caricata — contiene già la luce della luna.",lunarEn:"Selenite is the only stone that doesn't need charging — it already contains moonlight within itself.",words:[
+  {name:"Selenite",it:"Selenite",emoji:"🤍",lunar:"La selenite è l'unica pietra che non ha bisogno di essere caricata  contiene già la luce della luna.",lunarEn:"Selenite is the only stone that doesn't need charging  it already contains moonlight within itself.",words:[
     {en:"pure",it:"puro",ex:"Selenite has a pure white energy."},
     {en:"cleanse",it:"purificare",ex:"Use selenite to cleanse your space."},
     {en:"angelic",it:"angelico",ex:"It carries an angelic vibration."},
@@ -107,7 +107,7 @@ const CRYSTALS=[
     {en:"white",it:"bianco",ex:"Selenite is a beautiful white crystal."},
     {en:"peaceful",it:"pacifico / sereno",ex:"I feel so peaceful holding selenite."},
   ]},
-  {name:"Labradorite",it:"Labradorite",emoji:"🦋",lunar:"La labradorite brilla come la luna — mostra colori diversi a seconda della luce, come le nostre emozioni.",lunarEn:"Labradorite shines like the moon — it shows different colors depending on the light, just like our emotions.",words:[
+  {name:"Labradorite",it:"Labradorite",emoji:"🦋",lunar:"La labradorite brilla come la luna  mostra colori diversi a seconda della luce, come le nostre emozioni.",lunarEn:"Labradorite shines like the moon  it shows different colors depending on the light, just like our emotions.",words:[
     {en:"transform",it:"trasformare",ex:"She began to transform herself."},
     {en:"magical",it:"magico",ex:"Labradorite has a magical glow."},
     {en:"iridescent",it:"iridescente",ex:"The stone is iridescent and stunning."},
@@ -119,7 +119,7 @@ const CRYSTALS=[
     {en:"wonder",it:"meraviglia",ex:"Look at the world with wonder."},
     {en:"potential",it:"potenziale",ex:"You have incredible untapped potential."},
   ]},
-  {name:"Clear Quartz",it:"Quarzo Trasparente",emoji:"🔮",lunar:"Il quarzo trasparente amplifica l'energia di ogni altra pietra — lascialo sotto la luna piena vicino agli altri cristalli per ricaricarli tutti insieme.",lunarEn:"Clear quartz amplifies the energy of every other stone — leave it under the full moon next to your other crystals to recharge them all together.",words:[
+  {name:"Clear Quartz",it:"Quarzo Trasparente",emoji:"🔮",lunar:"Il quarzo trasparente amplifica l'energia di ogni altra pietra  lascialo sotto la luna piena vicino agli altri cristalli per ricaricarli tutti insieme.",lunarEn:"Clear quartz amplifies the energy of every other stone  leave it under the full moon next to your other crystals to recharge them all together.",words:[
     {en:"clarity",it:"chiarezza",ex:"Clear quartz brings mental clarity."},
     {en:"amplify",it:"amplificare",ex:"This stone amplifies your intentions."},
     {en:"focus",it:"concentrazione",ex:"Hold the quartz to sharpen your focus."},
@@ -131,7 +131,7 @@ const CRYSTALS=[
     {en:"renew",it:"rinnovare",ex:"A new moon helps you renew your goals."},
     {en:"clarify",it:"chiarire",ex:"Meditation helps clarify the mind."},
   ]},
-  {name:"Green Aventurine",it:"Avventurina Verde",emoji:"🍀",lunar:"L'avventurina verde è la pietra della fortuna — caricala sotto la luna crescente per attirare nuove opportunità e prosperità.",lunarEn:"Green aventurine is the stone of luck — charge it under the waxing moon to attract new opportunities and prosperity.",words:[
+  {name:"Green Aventurine",it:"Avventurina Verde",emoji:"🍀",lunar:"L'avventurina verde è la pietra della fortuna  caricala sotto la luna crescente per attirare nuove opportunità e prosperità.",lunarEn:"Green aventurine is the stone of luck  charge it under the waxing moon to attract new opportunities and prosperity.",words:[
     {en:"luck",it:"fortuna",ex:"Aventurine is a stone of good luck."},
     {en:"opportunity",it:"opportunità",ex:"A new opportunity is coming your way."},
     {en:"growth",it:"crescita",ex:"This crystal supports personal growth."},
@@ -143,7 +143,7 @@ const CRYSTALS=[
     {en:"renewal",it:"rinnovamento",ex:"Spring is a season of renewal."},
     {en:"soothing",it:"rasserenante",ex:"Its green color is so soothing."},
   ]},
-  {name:"Carnelian",it:"Corniola",emoji:"🧡",lunar:"La corniola si accende con la luna crescente — tienila vicino quando inizi qualcosa di nuovo, accende il coraggio e la passione.",lunarEn:"Carnelian ignites with the waxing moon — keep it close when starting something new, it sparks courage and passion.",words:[
+  {name:"Carnelian",it:"Corniola",emoji:"🧡",lunar:"La corniola si accende con la luna crescente  tienila vicino quando inizi qualcosa di nuovo, accende il coraggio e la passione.",lunarEn:"Carnelian ignites with the waxing moon  keep it close when starting something new, it sparks courage and passion.",words:[
     {en:"passion",it:"passione",ex:"Carnelian reignites your passion."},
     {en:"motivation",it:"motivazione",ex:"This stone boosts your motivation."},
     {en:"vitality",it:"vitalità",ex:"Carnelian is full of warm vitality."},
@@ -155,7 +155,7 @@ const CRYSTALS=[
     {en:"spark",it:"scintilla",ex:"Every great idea starts with a spark."},
     {en:"thrilling",it:"emozionante / elettrizzante",ex:"A new beginning is so thrilling."},
   ]},
-  {name:"Black Tourmaline",it:"Tormalina Nera",emoji:"🛡️",lunar:"La tormalina nera protegge dalle energie negative — puliscila sotto la luna calante e tienila vicino alla porta di casa.",lunarEn:"Black tourmaline protects against negative energy — cleanse it under the waning moon and keep it near your front door.",words:[
+  {name:"Black Tourmaline",it:"Tormalina Nera",emoji:"🛡️",lunar:"La tormalina nera protegge dalle energie negative  puliscila sotto la luna calante e tienila vicino alla porta di casa.",lunarEn:"Black tourmaline protects against negative energy  cleanse it under the waning moon and keep it near your front door.",words:[
     {en:"protection",it:"protezione",ex:"Black tourmaline offers strong protection."},
     {en:"safe",it:"al sicuro",ex:"This crystal helps you feel safe."},
     {en:"ground",it:"radicare",ex:"Tourmaline helps ground your energy."},
@@ -170,34 +170,34 @@ const CRYSTALS=[
 ];
 
 const ZODIAC=[
-  {sign:"Aries",it:"Ariete",emoji:"♈",dates:"21 Mar – 19 Apr",traits:["brave","energetic","bold","leader","passionate"],itTraits:["coraggioso","energico","audace","leader","appassionato"],element:"Fuoco 🔥",crystal:"Red Jasper 🔴",tip:"Say 'I am brave' every morning!",deep:"L'Ariete è il primo segno dello zodiaco — pieno di energia e voglia di iniziare nuove cose. Non ha paura di niente e va sempre avanti.",deepEn:"Aries is the first sign — full of energy and desire to start new things. It fears nothing and always moves forward."},
+  {sign:"Aries",it:"Ariete",emoji:"♈",dates:"21 Mar – 19 Apr",traits:["brave","energetic","bold","leader","passionate"],itTraits:["coraggioso","energico","audace","leader","appassionato"],element:"Fuoco 🔥",crystal:"Red Jasper 🔴",tip:"Say 'I am brave' every morning!",deep:"L'Ariete è il primo segno dello zodiaco  pieno di energia e voglia di iniziare nuove cose. Non ha paura di niente e va sempre avanti.",deepEn:"Aries is the first sign  full of energy and desire to start new things. It fears nothing and always moves forward."},
   {sign:"Taurus",it:"Toro",emoji:"♉",dates:"20 Apr – 20 May",traits:["loyal","patient","strong","sensual","reliable"],itTraits:["leale","paziente","forte","sensuale","affidabile"],element:"Terra 🌍",crystal:"Rose Quartz 🌸",tip:"Your English word: 'steadfast' = saldo, fedele.",deep:"Il Toro ama il bello, il comfort e la stabilità. È il segno più sensuale dello zodiaco.",deepEn:"Taurus loves beauty, comfort and stability. It's the most sensual sign of the zodiac."},
-  {sign:"Gemini",it:"Gemelli",emoji:"♊",dates:"21 May – 20 Jun",traits:["curious","clever","social","fun","adaptable"],itTraits:["curioso","intelligente","sociale","divertente","adattabile"],element:"Aria 💨",crystal:"Citrine 💛",tip:"Gemini loves to talk — perfect for learning English!",deep:"I Gemelli hanno due anime — sociali e riservati allo stesso tempo. Adorano imparare cose nuove.",deepEn:"Gemini has two souls — social and reserved at the same time. They love learning new things."},
-  {sign:"Cancer",it:"Cancro",emoji:"♋",dates:"21 Jun – 22 Jul",traits:["caring","sensitive","intuitive","nurturing","creative"],itTraits:["premuroso","sensibile","intuitivo","materno","creativo"],element:"Acqua 💧",crystal:"Moonstone 🌙",tip:"Your power word: 'nurture' = prendersi cura.",deep:"Il Cancro è governato dalla Luna — profondo e intuitivo. Ha un'enorme capacità di amare e proteggere.",deepEn:"Cancer is ruled by the Moon — deep and intuitive. It has an enormous capacity to love and protect."},
-  {sign:"Leo",it:"Leone",emoji:"♌",dates:"23 Jul – 22 Aug",traits:["confident","creative","warm","royal","generous"],itTraits:["sicuro","creativo","caldo","regale","generoso"],element:"Fuoco 🔥",crystal:"Sunstone ☀️",tip:"Say 'I am radiant' — it means raggiante!",deep:"Il Leone ama brillare e far sentire speciali le persone che ama. Ha un cuore grandissimo.",deepEn:"Leo loves to shine and make people it loves feel special. It has a huge heart."},
+  {sign:"Gemini",it:"Gemelli",emoji:"♊",dates:"21 May – 20 Jun",traits:["curious","clever","social","fun","adaptable"],itTraits:["curioso","intelligente","sociale","divertente","adattabile"],element:"Aria 💨",crystal:"Citrine 💛",tip:"Gemini loves to talk  perfect for learning English!",deep:"I Gemelli hanno due anime  sociali e riservati allo stesso tempo. Adorano imparare cose nuove.",deepEn:"Gemini has two souls  social and reserved at the same time. They love learning new things."},
+  {sign:"Cancer",it:"Cancro",emoji:"♋",dates:"21 Jun – 22 Jul",traits:["caring","sensitive","intuitive","nurturing","creative"],itTraits:["premuroso","sensibile","intuitivo","materno","creativo"],element:"Acqua 💧",crystal:"Moonstone 🌙",tip:"Your power word: 'nurture' = prendersi cura.",deep:"Il Cancro è governato dalla Luna  profondo e intuitivo. Ha un'enorme capacità di amare e proteggere.",deepEn:"Cancer is ruled by the Moon  deep and intuitive. It has an enormous capacity to love and protect."},
+  {sign:"Leo",it:"Leone",emoji:"♌",dates:"23 Jul – 22 Aug",traits:["confident","creative","warm","royal","generous"],itTraits:["sicuro","creativo","caldo","regale","generoso"],element:"Fuoco 🔥",crystal:"Sunstone ☀️",tip:"Say 'I am radiant'  it means raggiante!",deep:"Il Leone ama brillare e far sentire speciali le persone che ama. Ha un cuore grandissimo.",deepEn:"Leo loves to shine and make people it loves feel special. It has a huge heart."},
   {sign:"Virgo",it:"Vergine",emoji:"♍",dates:"23 Aug – 22 Sep",traits:["smart","helpful","careful","gentle","precise"],itTraits:["intelligente","utile","attento","gentile","preciso"],element:"Terra 🌍",crystal:"Amazonite 💚",tip:"Your word: 'meticulous' = meticoloso. Very Virgo!",deep:"La Vergine vede i dettagli che gli altri non notano. Si sente bene quando aiuta e migliora le cose.",deepEn:"Virgo sees details others miss. It feels good when it helps and improves things."},
-  {sign:"Libra",it:"Bilancia",emoji:"♎",dates:"23 Sep – 22 Oct",traits:["fair","peaceful","charming","balanced","elegant"],itTraits:["giusto","pacifico","affascinante","equilibrato","elegante"],element:"Aria 💨",crystal:"Lapis Lazuli 💙",tip:"'Aesthetic' is your English word — you know it!",deep:"La Bilancia è governata da Venere — ama la bellezza, l'armonia e le relazioni.",deepEn:"Libra is ruled by Venus — it loves beauty, harmony and relationships."},
-  {sign:"Scorpio",it:"Scorpione",emoji:"♏",dates:"23 Oct – 21 Nov",traits:["intense","passionate","deep","powerful","loyal"],itTraits:["intenso","appassionato","profondo","potente","leale"],element:"Acqua 💧",crystal:"Obsidian 🖤",tip:"Your word: 'magnetic' = magnetico. Very Scorpio!",deep:"Lo Scorpione è il segno della trasformazione — muore e rinasce come la fenice.",deepEn:"Scorpio is the sign of transformation — it dies and is reborn like a phoenix."},
+  {sign:"Libra",it:"Bilancia",emoji:"♎",dates:"23 Sep – 22 Oct",traits:["fair","peaceful","charming","balanced","elegant"],itTraits:["giusto","pacifico","affascinante","equilibrato","elegante"],element:"Aria 💨",crystal:"Lapis Lazuli 💙",tip:"'Aesthetic' is your English word  you know it!",deep:"La Bilancia è governata da Venere  ama la bellezza, l'armonia e le relazioni.",deepEn:"Libra is ruled by Venus  it loves beauty, harmony and relationships."},
+  {sign:"Scorpio",it:"Scorpione",emoji:"♏",dates:"23 Oct – 21 Nov",traits:["intense","passionate","deep","powerful","loyal"],itTraits:["intenso","appassionato","profondo","potente","leale"],element:"Acqua 💧",crystal:"Obsidian 🖤",tip:"Your word: 'magnetic' = magnetico. Very Scorpio!",deep:"Lo Scorpione è il segno della trasformazione  muore e rinasce come la fenice.",deepEn:"Scorpio is the sign of transformation  it dies and is reborn like a phoenix."},
   {sign:"Sagittarius",it:"Sagittario",emoji:"♐",dates:"22 Nov – 21 Dec",
    traits:["free","adventurous","honest","wise","optimistic","curious","funny","generous"],
    itTraits:["libero","avventuroso","onesto","saggio","ottimista","curioso","divertente","generoso"],
    element:"Fuoco 🔥",crystal:"Turquoise 🩵",tip:"'Wanderlust' = voglia di viaggiare. La parola più Sagittario!",
    isEmanuela:true,
-   planet:"Giove (Jupiter) 🪐 — il pianeta della fortuna e dell'espansione!",planetEn:"Jupiter 🪐 — the planet of luck and expansion!",
-   deep:"Il Sagittario è il filosofo e l'avventuriero dello zodiaco. Ama la libertà sopra ogni cosa — non sopporta le catene. È brutalmente onesto e dice sempre quello che pensa. Ama viaggiare, imparare lingue nuove e scoprire culture diverse. Giove gli porta fortuna naturale!",
+   planet:"Giove (Jupiter) 🪐  il pianeta della fortuna e dell'espansione!",planetEn:"Jupiter 🪐  the planet of luck and expansion!",
+   deep:"Il Sagittario è il filosofo e l'avventuriero dello zodiaco. Ama la libertà sopra ogni cosa  non sopporta le catene. È brutalmente onesto e dice sempre quello che pensa. Ama viaggiare, imparare lingue nuove e scoprire culture diverse. Giove gli porta fortuna naturale!",
    deepEn:"Sagittarius is the philosopher and adventurer of the zodiac. It loves freedom above all. It's brutally honest and always says what it thinks. It loves traveling, learning new languages and discovering different cultures. Jupiter brings natural luck!",
    compatible:["Ariete ♈","Leone ♌","Acquario ♒","Bilancia ♎"],
    celebrities:["Taylor Swift 🎵","Miley Cyrus 🎤","Billie Eilish 🖤","Brad Pitt 🎬","Nicki Minaj 👑"],
    shadowTraits:["impatient","restless","blunt","commitment-phobic"],shadowIt:["impaziente","irrequieto","brusco","evita gli impegni"],
-   powerWord:"'Expansive' = espansivo. La parola perfetta per l'energia del Sagittario — sempre più grande, sempre più lontano!",
+   powerWord:"'Expansive' = espansivo. La parola perfetta per l'energia del Sagittario  sempre più grande, sempre più lontano!",
   },
   {sign:"Capricorn",it:"Capricorno",emoji:"♑",dates:"22 Dec – 19 Jan",traits:["responsible","ambitious","wise","disciplined","patient"],itTraits:["responsabile","ambizioso","saggio","disciplinato","paziente"],element:"Terra 🌍",crystal:"Garnet ❤️",tip:"'Resilient' = resiliente. Your superpower!",deep:"Il Capricorno scala la montagna della vita con pazienza e determinazione. Non si ferma mai.",deepEn:"Capricorn climbs the mountain of life with patience and determination. It never stops."},
-  {sign:"Aquarius",it:"Acquario",emoji:"♒",dates:"20 Jan – 18 Feb",traits:["unique","open-minded","kind","original","visionary"],itTraits:["unico","aperto","gentile","originale","visionario"],element:"Aria 💨",crystal:"Amethyst 💜",tip:"'Revolutionary' — that's your energy!",deep:"L'Acquario è il segno del futuro — pensa in modo originale e vuole cambiare il mondo.",deepEn:"Aquarius is the sign of the future — it thinks originally and wants to change the world."},
+  {sign:"Aquarius",it:"Acquario",emoji:"♒",dates:"20 Jan – 18 Feb",traits:["unique","open-minded","kind","original","visionary"],itTraits:["unico","aperto","gentile","originale","visionario"],element:"Aria 💨",crystal:"Amethyst 💜",tip:"'Revolutionary'  that's your energy!",deep:"L'Acquario è il segno del futuro  pensa in modo originale e vuole cambiare il mondo.",deepEn:"Aquarius is the sign of the future  it thinks originally and wants to change the world."},
   {sign:"Pisces",it:"Pesci",emoji:"♓",dates:"19 Feb – 20 Mar",traits:["dreamy","artistic","kind","spiritual","empathetic"],itTraits:["sognante","artistico","gentile","spirituale","empatico"],element:"Acqua 💧",crystal:"Aquamarine 🩵",tip:"'Ethereal' = etereo. The most Pisces word ever.",deep:"I Pesci vivono tra realtà e sogno. Sono i più empatici dello zodiaco.",deepEn:"Pisces lives between reality and dream. They are the most empathetic of the zodiac."},
 ];
 
 const FACTS=[
-  {emoji:"🍋",title:"Limone & Spaghetti",titleEn:"Lemon & Spaghetti",fact:"Sapevi che 'zesty' significa piena di sapore e vivacità? Si usa spesso per i piatti col limone! E 'squeeze' vuol dire strizzare — esattamente quello che si fa col limone sulla pasta.",factEn:"'Zesty' means full of flavor and liveliness — often used for lemon dishes. 'Squeeze' means strizzare — exactly what you do with a lemon on pasta!",words:[
+  {emoji:"🍋",title:"Limone & Spaghetti",titleEn:"Lemon & Spaghetti",fact:"Sapevi che 'zesty' significa piena di sapore e vivacità? Si usa spesso per i piatti col limone! E 'squeeze' vuol dire strizzare  esattamente quello che si fa col limone sulla pasta.",factEn:"'Zesty' means full of flavor and liveliness  often used for lemon dishes. 'Squeeze' means strizzare  exactly what you do with a lemon on pasta!",words:[
     {en:"lemon",it:"limone",ex:"This pasta has fresh lemon!"},
     {en:"zesty",it:"saporito / vivace",ex:"This dish is incredibly zesty."},
     {en:"squeeze",it:"strizzare",ex:"Squeeze the lemon over the pasta."},
@@ -207,7 +207,7 @@ const FACTS=[
     {en:"ingredient",it:"ingrediente",ex:"What are the ingredients?"},
     {en:"simmer",it:"cuocere a fuoco lento",ex:"Let the sauce simmer for ten minutes."},
   ]},
-  {emoji:"🌊",title:"La Spiaggia",titleEn:"The Beach",fact:"'Shore' e 'coast' sono sinonimi di riva/costa. 'Beach' è la parte sabbiosa. 'Tide' è la marea — 'high tide' è alta marea, 'low tide' è bassa marea. 'Driftwood' è il legno trascinato dal mare.",factEn:"'Shore' and 'coast' both mean riva/costa. 'Beach' is the sandy part. 'Tide' is marea — 'high tide' is alta marea, 'low tide' is bassa marea.",words:[
+  {emoji:"🌊",title:"La Spiaggia",titleEn:"The Beach",fact:"'Shore' e 'coast' sono sinonimi di riva/costa. 'Beach' è la parte sabbiosa. 'Tide' è la marea  'high tide' è alta marea, 'low tide' è bassa marea. 'Driftwood' è il legno trascinato dal mare.",factEn:"'Shore' and 'coast' both mean riva/costa. 'Beach' is the sandy part. 'Tide' is marea  'high tide' is alta marea, 'low tide' is bassa marea.",words:[
     {en:"wave",it:"onda",ex:"Look at that enormous wave!"},
     {en:"shore",it:"riva",ex:"Let's walk along the shore."},
     {en:"tide",it:"marea",ex:"The tide is coming in."},
@@ -227,7 +227,7 @@ const FACTS=[
     {en:"stunning",it:"mozzafiato",ex:"Your new look is absolutely stunning."},
     {en:"style",it:"stile",ex:"She has an incredible personal style."},
   ]},
-  {emoji:"🧘",title:"Pilates in Inglese",titleEn:"Pilates in English",fact:"Il pilates è stato inventato da Joseph Pilates negli anni '20 in Germania! Le istruzioni nelle classi sono quasi sempre in inglese. La parola più importante? 'Core' — il centro del corpo. Senza core non si fa pilates!",factEn:"Pilates was invented by Joseph Pilates in the 1920s in Germany! Class instructions are almost always in English. The most important word? 'Core' — the body's center. No core, no pilates!",words:[
+  {emoji:"🧘",title:"Pilates in Inglese",titleEn:"Pilates in English",fact:"Il pilates è stato inventato da Joseph Pilates negli anni '20 in Germania! Le istruzioni nelle classi sono quasi sempre in inglese. La parola più importante? 'Core'  il centro del corpo. Senza core non si fa pilates!",factEn:"Pilates was invented by Joseph Pilates in the 1920s in Germany! Class instructions are almost always in English. The most important word? 'Core'  the body's center. No core, no pilates!",words:[
     {en:"breathe",it:"respirare",ex:"Breathe in slowly and deeply."},
     {en:"core",it:"addominali / centro",ex:"Engage your core right now!"},
     {en:"lengthen",it:"allungare",ex:"Lengthen your spine up tall."},
@@ -237,7 +237,7 @@ const FACTS=[
     {en:"inhale",it:"inspirare",ex:"Inhale through your nose slowly."},
     {en:"tuck",it:"inclinare / portare dentro",ex:"Tuck your chin slightly forward."},
   ]},
-  {emoji:"🏋️",title:"Attrezzatura Pilates",titleEn:"Pilates Equipment",fact:"Il pilates non è solo tappetino! Il 'reformer' è la macchina più famosa — un lettino con molle e cinghie. Il 'magic circle' o 'ring' si tiene tra le ginocchia o le braccia per creare resistenza. Conoscere questi nomi ti aiuta con i video YouTube!",factEn:"Pilates is not just a mat! The 'reformer' is the most famous machine — a bed with springs and straps. The 'magic circle' or 'ring' is held between knees or arms for resistance. Knowing these names helps with YouTube videos!",words:[
+  {emoji:"🏋️",title:"Attrezzatura Pilates",titleEn:"Pilates Equipment",fact:"Il pilates non è solo tappetino! Il 'reformer' è la macchina più famosa  un lettino con molle e cinghie. Il 'magic circle' o 'ring' si tiene tra le ginocchia o le braccia per creare resistenza. Conoscere questi nomi ti aiuta con i video YouTube!",factEn:"Pilates is not just a mat! The 'reformer' is the most famous machine  a bed with springs and straps. The 'magic circle' or 'ring' is held between knees or arms for resistance. Knowing these names helps with YouTube videos!",words:[
     {en:"reformer",it:"reformer (macchina pilates)",ex:"The reformer class was amazing!"},
     {en:"resistance",it:"resistenza",ex:"Increase the resistance slowly."},
     {en:"neutral spine",it:"colonna in posizione neutra",ex:"Keep a neutral spine always."},
@@ -247,7 +247,7 @@ const FACTS=[
     {en:"spring",it:"molla",ex:"Add another spring for more resistance."},
     {en:"rep",it:"ripetizione",ex:"Do ten reps on each side."},
   ]},
-  {emoji:"🧠",title:"Psicologia",titleEn:"Psychology",fact:"La psicologia usa tantissime parole inglesi che sentiamo ogni giorno! 'Boundaries' (confini personali) è forse la più importante — saper dire no è fondamentale. 'Gaslighting', 'toxic', 'trigger' — tutte dall'inglese!",factEn:"Psychology uses many English words we hear daily! 'Boundaries' is perhaps the most important — knowing how to say no is essential. 'Gaslighting', 'toxic', 'trigger' — all from English!",words:[
+  {emoji:"🧠",title:"Psicologia",titleEn:"Psychology",fact:"La psicologia usa tantissime parole inglesi che sentiamo ogni giorno! 'Boundaries' (confini personali) è forse la più importante  saper dire no è fondamentale. 'Gaslighting', 'toxic', 'trigger'  tutte dall'inglese!",factEn:"Psychology uses many English words we hear daily! 'Boundaries' is perhaps the most important  knowing how to say no is essential. 'Gaslighting', 'toxic', 'trigger'  all from English!",words:[
     {en:"anxiety",it:"ansia",ex:"I sometimes feel anxiety."},
     {en:"boundary",it:"confine / limite",ex:"I need to set my boundaries."},
     {en:"resilience",it:"resilienza",ex:"She has incredible resilience."},
@@ -267,7 +267,7 @@ const FACTS=[
     {en:"childhood",it:"infanzia",ex:"Our childhood shapes who we become."},
     {en:"emotional",it:"emotivo",ex:"She is a very emotional person."},
   ]},
-  {emoji:"💕",title:"Romanzi Rosa",titleEn:"Romance Novels",fact:"I romanzi rosa sono il genere più venduto al mondo in inglese! La parola 'longing' non ha traduzione esatta: è un misto di desiderio, nostalgia e attesa. E 'swoon' — cedere per qualcuno di bello — è la reazione tipica del romance!",factEn:"Romance novels are the best-selling genre in English! 'Longing' has no exact Italian translation: a mix of desire, nostalgia and waiting. And 'swoon' — to faint from beauty — is the typical romance reaction!",words:[
+  {emoji:"💕",title:"Romanzi Rosa",titleEn:"Romance Novels",fact:"I romanzi rosa sono il genere più venduto al mondo in inglese! La parola 'longing' non ha traduzione esatta: è un misto di desiderio, nostalgia e attesa. E 'swoon'  cedere per qualcuno di bello  è la reazione tipica del romance!",factEn:"Romance novels are the best-selling genre in English! 'Longing' has no exact Italian translation: a mix of desire, nostalgia and waiting. And 'swoon'  to faint from beauty  is the typical romance reaction!",words:[
     {en:"longing",it:"desiderio / nostalgia",ex:"She felt a deep longing for him."},
     {en:"tender",it:"tenero",ex:"His voice was so tender and warm."},
     {en:"whisper",it:"sussurrare",ex:"He whispered her name softly."},
@@ -277,7 +277,7 @@ const FACTS=[
     {en:"breathless",it:"senza fiato",ex:"His words left her breathless."},
     {en:"flutter",it:"fremito / battere",ex:"Her heart fluttered when he walked in."},
   ]},
-  {emoji:"📚",title:"Nicholas Sparks",titleEn:"Nicholas Sparks",fact:"Nicholas Sparks è il re del romanzo rosa americano! 'The Notebook' (Le pagine della nostra vita) e 'A Walk to Remember' sono i suoi capolavori. La sua parola chiave? 'Devoted' — essere completamente dedicati a qualcuno per tutta la vita.",factEn:"Nicholas Sparks is the king of American romance! 'The Notebook' and 'A Walk to Remember' are his masterpieces. His keyword? 'Devoted' — being completely dedicated to someone for your whole life.",words:[
+  {emoji:"📚",title:"Nicholas Sparks",titleEn:"Nicholas Sparks",fact:"Nicholas Sparks è il re del romanzo rosa americano! 'The Notebook' (Le pagine della nostra vita) e 'A Walk to Remember' sono i suoi capolavori. La sua parola chiave? 'Devoted'  essere completamente dedicati a qualcuno per tutta la vita.",factEn:"Nicholas Sparks is the king of American romance! 'The Notebook' and 'A Walk to Remember' are his masterpieces. His keyword? 'Devoted'  being completely dedicated to someone for your whole life.",words:[
     {en:"devoted",it:"devoto / dedicato",ex:"He was devoted to her forever."},
     {en:"cherish",it:"custodire / tenere caro",ex:"I cherish every moment with you."},
     {en:"soulmate",it:"anima gemella",ex:"I think you are my soulmate."},
@@ -287,7 +287,7 @@ const FACTS=[
     {en:"fate",it:"destino",ex:"It must have been fate that we met."},
     {en:"memory",it:"ricordo",ex:"I hold this memory in my heart."},
   ]},
-  {emoji:"📖",title:"Colleen Hoover",titleEn:"Colleen Hoover",fact:"Colleen Hoover — chiamata 'CoHo' dai fan — è la regina del romance moderno! 'It Ends With Us', 'Ugly Love', 'November 9' — tutti bestseller mondiali. I suoi libri parlano di donne forti, amori complicati e crescita personale.",factEn:"Colleen Hoover — called 'CoHo' by fans — is the queen of modern romance! 'It Ends With Us', 'Ugly Love', 'November 9' — all worldwide bestsellers. Her books deal with strong women, complicated loves and personal growth.",words:[
+  {emoji:"📖",title:"Colleen Hoover",titleEn:"Colleen Hoover",fact:"Colleen Hoover  chiamata 'CoHo' dai fan  è la regina del romance moderno! 'It Ends With Us', 'Ugly Love', 'November 9'  tutti bestseller mondiali. I suoi libri parlano di donne forti, amori complicati e crescita personale.",factEn:"Colleen Hoover  called 'CoHo' by fans  is the queen of modern romance! 'It Ends With Us', 'Ugly Love', 'November 9'  all worldwide bestsellers. Her books deal with strong women, complicated loves and personal growth.",words:[
     {en:"vulnerable",it:"vulnerabile",ex:"Being vulnerable takes real courage."},
     {en:"deserve",it:"meritare",ex:"You deserve so much better."},
     {en:"brave",it:"coraggioso",ex:"She was brave enough to leave."},
@@ -307,7 +307,7 @@ const FACTS=[
     {en:"ivory",it:"avorio",ex:"She wore an elegant ivory gown."},
     {en:"crimson",it:"cremisi / rosso intenso",ex:"The sunset turned a deep crimson."},
   ]},
-  {emoji:"🌙",title:"Il Vocabolario della Luna",titleEn:"The Language of the Moon",fact:"La luna ha un vocabolario tutto suo! 'Waxing' = la luna cresce, 'waning' = diminuisce. 'Crescent' è la luna a falce. E sai che 'lunatic' — pazzo — viene proprio da 'luna'? I romani credevano che la luna piena rendesse le persone pazze!",factEn:"The moon has its own vocabulary! 'Waxing' = the moon grows, 'waning' = it shrinks. 'Crescent' is the crescent moon. Did you know 'lunatic' comes from 'luna'? Romans believed the full moon made people crazy!",words:[
+  {emoji:"🌙",title:"Il Vocabolario della Luna",titleEn:"The Language of the Moon",fact:"La luna ha un vocabolario tutto suo! 'Waxing' = la luna cresce, 'waning' = diminuisce. 'Crescent' è la luna a falce. E sai che 'lunatic'  pazzo  viene proprio da 'luna'? I romani credevano che la luna piena rendesse le persone pazze!",factEn:"The moon has its own vocabulary! 'Waxing' = the moon grows, 'waning' = it shrinks. 'Crescent' is the crescent moon. Did you know 'lunatic' comes from 'luna'? Romans believed the full moon made people crazy!",words:[
     {en:"waxing",it:"crescente",ex:"The waxing moon brings new energy."},
     {en:"waning",it:"calante",ex:"The waning moon is for releasing."},
     {en:"crescent",it:"falce / mezzaluna",ex:"The crescent moon is so romantic."},
@@ -347,7 +347,7 @@ const FACTS=[
     {en:"drizzle",it:"condire con un filo",ex:"Drizzle some olive oil on top."},
     {en:"seasonal",it:"di stagione",ex:"Always choose seasonal vegetables."},
   ]},
-  {emoji:"🌺",title:"Natura & Stagioni",titleEn:"Nature & Seasons",fact:"Le stagioni: spring (primavera), summer (estate), autumn/fall (autunno), winter (inverno). Gli americani dicono 'fall' per autunno! E 'blossom' è uno dei verbi più belli — fiorire, sbocciare. Si usa anche per le persone: 'She is blossoming.'",factEn:"Seasons: spring, summer, autumn/fall, winter. Americans say 'fall' for autumn! And 'blossom' is one of the most beautiful verbs — fiorire. Also used for people: 'She is blossoming.'",words:[
+  {emoji:"🌺",title:"Natura & Stagioni",titleEn:"Nature & Seasons",fact:"Le stagioni: spring (primavera), summer (estate), autumn/fall (autunno), winter (inverno). Gli americani dicono 'fall' per autunno! E 'blossom' è uno dei verbi più belli  fiorire, sbocciare. Si usa anche per le persone: 'She is blossoming.'",factEn:"Seasons: spring, summer, autumn/fall, winter. Americans say 'fall' for autumn! And 'blossom' is one of the most beautiful verbs  fiorire. Also used for people: 'She is blossoming.'",words:[
     {en:"blossom",it:"fiorire / sbocciare",ex:"She is starting to blossom."},
     {en:"breeze",it:"brezza",ex:"The sea breeze is so refreshing."},
     {en:"bloom",it:"fioritura",ex:"The flowers are in full bloom."},
@@ -367,7 +367,7 @@ const FACTS=[
     {en:"recharge",it:"ricaricarsi",ex:"A quiet evening helps me recharge."},
     {en:"mindfulness",it:"consapevolezza del momento",ex:"Mindfulness helps reduce anxiety."},
   ]},
-  {emoji:"🎵",title:"Musica & Sentimenti",titleEn:"Music & Feelings",fact:"'Bittersweet' è agrodolce — gioia mista a tristezza. 'Goosebumps' (pelle d'oca) è quello che senti quando una canzone ti emoziona davvero. E 'melancholy' — malinconia — è una delle parole più belle in inglese!",factEn:"'Bittersweet' is agrodolce — joy mixed with sadness. 'Goosebumps' is pelle d'oca. And 'melancholy' — malinconia — is one of the most beautiful English words!",words:[
+  {emoji:"🎵",title:"Musica & Sentimenti",titleEn:"Music & Feelings",fact:"'Bittersweet' è agrodolce  gioia mista a tristezza. 'Goosebumps' (pelle d'oca) è quello che senti quando una canzone ti emoziona davvero. E 'melancholy'  malinconia  è una delle parole più belle in inglese!",factEn:"'Bittersweet' is agrodolce  joy mixed with sadness. 'Goosebumps' is pelle d'oca. And 'melancholy'  malinconia  is one of the most beautiful English words!",words:[
     {en:"bittersweet",it:"agrodolce",ex:"This song feels so bittersweet."},
     {en:"goosebumps",it:"pelle d'oca",ex:"This song gives me goosebumps!"},
     {en:"soothing",it:"calmante / rilassante",ex:"The music is very soothing."},
@@ -377,7 +377,7 @@ const FACTS=[
     {en:"chorus",it:"ritornello",ex:"The chorus is the best part!"},
     {en:"nostalgic",it:"nostalgico",ex:"This song makes me feel so nostalgic."},
   ]},
-  {emoji:"🚨",title:"False Friends!",titleEn:"False Friends — Attenzione!",fact:"Le 'false friends' sono parole inglesi che SEMBRANO italiane ma significano cose completamente diverse! 'Actually' NON vuol dire 'attualmente' — significa 'in realtà'! 'Library' NON è 'libreria' — è 'biblioteca'! Conoscerle ti evita figuracce imbarazzanti!",factEn:"'False friends' are English words that LOOK Italian but mean completely different things! 'Actually' does NOT mean 'attualmente' — it means 'in realtà'! 'Library' is NOT 'libreria' — it's 'biblioteca'! Knowing them saves you from embarrassing mistakes!",words:[
+  {emoji:"🚨",title:"False Friends!",titleEn:"False Friends  Attenzione!",fact:"Le 'false friends' sono parole inglesi che SEMBRANO italiane ma significano cose completamente diverse! 'Actually' NON vuol dire 'attualmente'  significa 'in realtà'! 'Library' NON è 'libreria'  è 'biblioteca'! Conoscerle ti evita figuracce imbarazzanti!",factEn:"'False friends' are English words that LOOK Italian but mean completely different things! 'Actually' does NOT mean 'attualmente'  it means 'in realtà'! 'Library' is NOT 'libreria'  it's 'biblioteca'! Knowing them saves you from embarrassing mistakes!",words:[
     {en:"actually",it:"⚠️ IN REALTÀ (≠ attualmente!)",ex:"Actually, I love Italian food!"},
     {en:"eventually",it:"⚠️ ALLA FINE (≠ eventualmente!)",ex:"Eventually she learned English."},
     {en:"library",it:"⚠️ BIBLIOTECA (≠ libreria!)",ex:"I found this at the library."},
@@ -387,7 +387,7 @@ const FACTS=[
     {en:"argument",it:"⚠️ LITIGIO (≠ argomento!)",ex:"We had a small argument yesterday."},
     {en:"pretend",it:"⚠️ FINGERE (≠ pretendere!)",ex:"She pretended she didn't hear me."},
   ]},
-  {emoji:"💬",title:"Frasi Pratiche",titleEn:"Everyday English Phrases",fact:"Queste sono le frasi che si usano DAVVERO nella vita quotidiana in inglese! Al ristorante, in viaggio, con colleghi stranieri. Imparare frasi complete vale più di 50 parole isolate — sono pronte da usare subito!",factEn:"These are the phrases ACTUALLY used in daily English life! At restaurants, traveling, with foreign colleagues. Learning complete phrases is worth more than isolated words — they're ready to use immediately!",words:[
+  {emoji:"💬",title:"Frasi Pratiche",titleEn:"Everyday English Phrases",fact:"Queste sono le frasi che si usano DAVVERO nella vita quotidiana in inglese! Al ristorante, in viaggio, con colleghi stranieri. Imparare frasi complete vale più di 50 parole isolate  sono pronte da usare subito!",factEn:"These are the phrases ACTUALLY used in daily English life! At restaurants, traveling, with foreign colleagues. Learning complete phrases is worth more than isolated words  they're ready to use immediately!",words:[
     {en:"Can I have the bill, please?",it:"Posso avere il conto, per favore?",ex:"Waiter! Can I have the bill, please?"},
     {en:"Could you repeat that, please?",it:"Puoi ripetere, per favore?",ex:"Sorry, could you repeat that slowly?"},
     {en:"How much does it cost?",it:"Quanto costa?",ex:"Excuse me, how much does this cost?"},
@@ -397,7 +397,7 @@ const FACTS=[
     {en:"Where is the nearest...?",it:"Dov'è il/la più vicino/a...?",ex:"Where is the nearest pharmacy?"},
     {en:"I would like to book a table.",it:"Vorrei prenotare un tavolo.",ex:"Hi, I would like to book a table for two."},
   ]},
-  {emoji:"📅",title:"Numeri & Giorni",titleEn:"Numbers & Days",fact:"I giorni della settimana in inglese vengono da divinità nordiche e romane! Monday = Luna (Moon-day), Thursday = Thor (dio del tuono), Friday = Freya (dea dell'amore), Saturday = Saturno. E December viene da 'decem' — dieci in latino, perché era il decimo mese del calendario romano!",factEn:"English days of the week come from Nordic and Roman deities! Monday = Moon-day, Thursday = Thor, Friday = Freya (goddess of love). And December comes from 'decem' — ten in Latin, because it was the 10th month of the Roman calendar!",words:[
+  {emoji:"📅",title:"Numeri & Giorni",titleEn:"Numbers & Days",fact:"I giorni della settimana in inglese vengono da divinità nordiche e romane! Monday = Luna (Moon-day), Thursday = Thor (dio del tuono), Friday = Freya (dea dell'amore), Saturday = Saturno. E December viene da 'decem'  dieci in latino, perché era il decimo mese del calendario romano!",factEn:"English days of the week come from Nordic and Roman deities! Monday = Moon-day, Thursday = Thor, Friday = Freya (goddess of love). And December comes from 'decem'  ten in Latin, because it was the 10th month of the Roman calendar!",words:[
     {en:"Monday / Friday",it:"Lunedì / Venerdì",ex:"I have pilates on Monday and Friday."},
     {en:"weekend",it:"fine settimana",ex:"I love weekends at the beach!"},
     {en:"January / December",it:"Gennaio / Dicembre",ex:"My birthday is in December! ♐"},
@@ -407,7 +407,7 @@ const FACTS=[
     {en:"deadline",it:"scadenza",ex:"The deadline is next Friday."},
     {en:"appointment",it:"appuntamento",ex:"I have a doctor's appointment tomorrow."},
   ]},
-  {emoji:"✈️",title:"Viaggiare in Inglese",titleEn:"Travel English",fact:"Saper parlare inglese in aeroporto ti salva la vita! 'Boarding pass' è la carta d'imbarco, 'luggage' sono i bagagli, 'check-in' lo conosci già! E se senti 'Last call for boarding' — corri, è l'ultimo avviso per salire sull'aereo!",factEn:"Knowing English at the airport is a lifesaver! 'Boarding pass' = carta d'imbarco, 'luggage' = bagagli, 'check-in' you already know! And if you hear 'Last call for boarding' — run, it's the last warning to board!",words:[
+  {emoji:"✈️",title:"Viaggiare in Inglese",titleEn:"Travel English",fact:"Saper parlare inglese in aeroporto ti salva la vita! 'Boarding pass' è la carta d'imbarco, 'luggage' sono i bagagli, 'check-in' lo conosci già! E se senti 'Last call for boarding'  corri, è l'ultimo avviso per salire sull'aereo!",factEn:"Knowing English at the airport is a lifesaver! 'Boarding pass' = carta d'imbarco, 'luggage' = bagagli, 'check-in' you already know! And if you hear 'Last call for boarding'  run, it's the last warning to board!",words:[
     {en:"boarding pass",it:"carta d'imbarco",ex:"Please have your boarding pass ready."},
     {en:"luggage",it:"bagagli",ex:"My luggage is on the conveyor belt."},
     {en:"departure",it:"partenza",ex:"What time is your departure?"},
@@ -427,7 +427,7 @@ const FACTS=[
     {en:"tailored",it:"su misura / sartoriale",ex:"She wore a perfectly tailored blazer."},
     {en:"chic",it:"chic / elegante",ex:"The look is effortlessly chic."},
   ]},
-  {emoji:"💌",title:"Amicizia",titleEn:"Friendship",fact:"In inglese ci sono parole bellissime per descrivere l'amicizia! 'Bestie' è il termine informale per migliore amica. 'Ride or die' significa un'amica fedele in ogni situazione. E 'soul sister' è una vera sorella d'anima — un'amica che senti parte di te!",factEn:"English has beautiful words for friendship! 'Bestie' is the informal term for best friend. 'Ride or die' means a loyal friend in any situation. And 'soul sister' is a true soul sister — a friend you feel is part of you!",words:[
+  {emoji:"💌",title:"Amicizia",titleEn:"Friendship",fact:"In inglese ci sono parole bellissime per descrivere l'amicizia! 'Bestie' è il termine informale per migliore amica. 'Ride or die' significa un'amica fedele in ogni situazione. E 'soul sister' è una vera sorella d'anima  un'amica che senti parte di te!",factEn:"English has beautiful words for friendship! 'Bestie' is the informal term for best friend. 'Ride or die' means a loyal friend in any situation. And 'soul sister' is a true soul sister  a friend you feel is part of you!",words:[
     {en:"bestie",it:"migliore amica",ex:"She is my absolute bestie."},
     {en:"bond",it:"legame",ex:"We have such a strong bond."},
     {en:"loyal",it:"leale / fedele",ex:"A loyal friend is a treasure."},
@@ -437,7 +437,7 @@ const FACTS=[
     {en:"check in",it:"controllare come stai",ex:"I always check in on my friends."},
     {en:"unconditional",it:"incondizionato",ex:"True friendship is unconditional."},
   ]},
-  {emoji:"🌍",title:"Emozioni in Inglese",titleEn:"Emotions in English",fact:"L'inglese ha parole per emozioni che l'italiano non ha! 'Overwhelmed' significa sopraffatta da tutto — troppo da gestire. 'Grateful' è grata. 'Content' non è contento eccitato, ma quella pace profonda di quando tutto va bene. Impara queste parole e potrai esprimere tutto!",factEn:"English has words for emotions Italian doesn't! 'Overwhelmed' means sopraffatta — too much to handle. 'Grateful' = grata. 'Content' is not excited happiness but the deep peace of when everything is okay. Learn these and you can express everything!",words:[
+  {emoji:"🌍",title:"Emozioni in Inglese",titleEn:"Emotions in English",fact:"L'inglese ha parole per emozioni che l'italiano non ha! 'Overwhelmed' significa sopraffatta da tutto  troppo da gestire. 'Grateful' è grata. 'Content' non è contento eccitato, ma quella pace profonda di quando tutto va bene. Impara queste parole e potrai esprimere tutto!",factEn:"English has words for emotions Italian doesn't! 'Overwhelmed' means sopraffatta  too much to handle. 'Grateful' = grata. 'Content' is not excited happiness but the deep peace of when everything is okay. Learn these and you can express everything!",words:[
     {en:"overwhelmed",it:"sopraffatta / sommersa",ex:"I feel completely overwhelmed today."},
     {en:"grateful",it:"grata / riconoscente",ex:"I am so grateful for this moment."},
     {en:"content",it:"appagata / in pace",ex:"I feel truly content with my life."},
@@ -447,7 +447,7 @@ const FACTS=[
     {en:"at peace",it:"in pace",ex:"I finally feel at peace with myself."},
     {en:"excited",it:"entusiasta / emozionata",ex:"I am so excited for tomorrow!"},
   ]},
-  {emoji:"🔮",title:"I Tarocchi",titleEn:"Tarot Cards",fact:"I tarocchi hanno un vocabolario inglese affascinante! 'Deck' è il mazzo di carte, 'spread' è la disposizione delle carte sul tavolo. La carta 'The Moon' 🌙 rappresenta l'intuizione e i sogni — perfetta per te! E 'to draw a card' significa pescare una carta.",factEn:"Tarot has a fascinating English vocabulary! 'Deck' is the set of cards, 'spread' is the layout on the table. 'The Moon' card represents intuition and dreams — perfect for you! And 'to draw a card' means pescare una carta.",words:[
+  {emoji:"🔮",title:"I Tarocchi",titleEn:"Tarot Cards",fact:"I tarocchi hanno un vocabolario inglese affascinante! 'Deck' è il mazzo di carte, 'spread' è la disposizione delle carte sul tavolo. La carta 'The Moon' 🌙 rappresenta l'intuizione e i sogni  perfetta per te! E 'to draw a card' significa pescare una carta.",factEn:"Tarot has a fascinating English vocabulary! 'Deck' is the set of cards, 'spread' is the layout on the table. 'The Moon' card represents intuition and dreams  perfect for you! And 'to draw a card' means pescare una carta.",words:[
     {en:"deck",it:"mazzo di carte",ex:"She shuffled the tarot deck slowly."},
     {en:"spread",it:"disposizione / stesa",ex:"This is a three-card spread."},
     {en:"draw a card",it:"pescare una carta",ex:"Draw a card and trust your intuition."},
@@ -457,7 +457,7 @@ const FACTS=[
     {en:"reversed",it:"al rovescio / capovolta",ex:"The card came out reversed."},
     {en:"guidance",it:"guida / orientamento",ex:"I seek guidance from the cards."},
   ]},
-  {emoji:"🪐",title:"I Pianeti & l'Oroscopo",titleEn:"Planets & Astrology",fact:"In astrologia ogni pianeta ha un nome inglese da sapere! 'Mercury' governa la comunicazione, 'Venus' (Venere) l'amore, 'Mars' (Marte) l'azione. E quando senti 'Mercury is in retrograde' (Mercurio retrogrado) sai che tutto va storto — ottima scusa per ogni pasticcio! 😄",factEn:"In astrology every planet has an English name to know! 'Mercury' rules communication, 'Venus' love, 'Mars' action. And when you hear 'Mercury is in retrograde' you know everything goes wrong — the perfect excuse for any mess!",words:[
+  {emoji:"🪐",title:"I Pianeti & l'Oroscopo",titleEn:"Planets & Astrology",fact:"In astrologia ogni pianeta ha un nome inglese da sapere! 'Mercury' governa la comunicazione, 'Venus' (Venere) l'amore, 'Mars' (Marte) l'azione. E quando senti 'Mercury is in retrograde' (Mercurio retrogrado) sai che tutto va storto  ottima scusa per ogni pasticcio! 😄",factEn:"In astrology every planet has an English name to know! 'Mercury' rules communication, 'Venus' love, 'Mars' action. And when you hear 'Mercury is in retrograde' you know everything goes wrong  the perfect excuse for any mess!",words:[
     {en:"planet",it:"pianeta",ex:"Each planet rules a part of life."},
     {en:"horoscope",it:"oroscopo",ex:"I read my horoscope every morning."},
     {en:"retrograde",it:"retrogrado",ex:"Mercury is in retrograde again!"},
@@ -467,7 +467,7 @@ const FACTS=[
     {en:"orbit",it:"orbita",ex:"The moon orbits around the Earth."},
     {en:"cosmic",it:"cosmico",ex:"I feel a cosmic connection to her."},
   ]},
-  {emoji:"🎤",title:"Taylor Swift & le Eras",titleEn:"Taylor Swift & the Eras",fact:"Taylor Swift è un'ottima maestra d'inglese! Le sue canzoni sono piene di parole vere e quotidiane. Un 'era' è un periodo della vita o della carriera — il famoso 'Eras Tour'! E 'lyrics' sono i testi delle canzoni. Ascoltare e leggere i lyrics insieme è il modo migliore per imparare!",factEn:"Taylor Swift is a great English teacher! Her songs are full of real, everyday words. An 'era' is a period of life or career — the famous 'Eras Tour'! And 'lyrics' are the song words. Listening and reading lyrics together is the best way to learn!",words:[
+  {emoji:"🎤",title:"Taylor Swift & le Eras",titleEn:"Taylor Swift & the Eras",fact:"Taylor Swift è un'ottima maestra d'inglese! Le sue canzoni sono piene di parole vere e quotidiane. Un 'era' è un periodo della vita o della carriera  il famoso 'Eras Tour'! E 'lyrics' sono i testi delle canzoni. Ascoltare e leggere i lyrics insieme è il modo migliore per imparare!",factEn:"Taylor Swift is a great English teacher! Her songs are full of real, everyday words. An 'era' is a period of life or career  the famous 'Eras Tour'! And 'lyrics' are the song words. Listening and reading lyrics together is the best way to learn!",words:[
     {en:"era",it:"era / periodo",ex:"This is my favorite era of her music."},
     {en:"lyrics",it:"testo della canzone",ex:"The lyrics tell a whole story."},
     {en:"bridge",it:"bridge (parte della canzone)",ex:"The bridge of this song is iconic!"},
@@ -477,7 +477,7 @@ const FACTS=[
     {en:"sold out",it:"tutto esaurito",ex:"The concert sold out in minutes!"},
     {en:"anthem",it:"inno",ex:"This song is an anthem for girls."},
   ]},
-  {emoji:"🧘‍♀️",title:"Yoga & Meditazione",titleEn:"Yoga & Meditation",fact:"Lo yoga usa parole inglesi e sanscrite insieme! 'Mat' è il tappetino (come nel pilates!), 'pose' è la posizione, 'breath' è il respiro. E 'namasté' chiude ogni lezione. La parola chiave? 'Mindful' — essere pienamente presenti nel momento. Una parola che vale oro!",factEn:"Yoga uses English and Sanskrit words together! 'Mat' is the tappetino (like pilates!), 'pose' is the position, 'breath' is the respiro. And 'namasté' closes every class. The keyword? 'Mindful' — being fully present in the moment. A golden word!",words:[
+  {emoji:"🧘‍♀️",title:"Yoga & Meditazione",titleEn:"Yoga & Meditation",fact:"Lo yoga usa parole inglesi e sanscrite insieme! 'Mat' è il tappetino (come nel pilates!), 'pose' è la posizione, 'breath' è il respiro. E 'namasté' chiude ogni lezione. La parola chiave? 'Mindful'  essere pienamente presenti nel momento. Una parola che vale oro!",factEn:"Yoga uses English and Sanskrit words together! 'Mat' is the tappetino (like pilates!), 'pose' is the position, 'breath' is the respiro. And 'namasté' closes every class. The keyword? 'Mindful'  being fully present in the moment. A golden word!",words:[
     {en:"pose",it:"posizione / posa",ex:"Hold this pose for five breaths."},
     {en:"mindful",it:"consapevole / presente",ex:"Be mindful of every breath."},
     {en:"stillness",it:"immobilità / quiete",ex:"Find stillness in your mind."},
@@ -487,7 +487,7 @@ const FACTS=[
     {en:"release",it:"rilasciare / lasciar andare",ex:"Release the tension in your back."},
     {en:"grounded",it:"radicato / centrato",ex:"I feel grounded after yoga."},
   ]},
-  {emoji:"🧴",title:"Skincare & Bellezza",titleEn:"Skincare & Beauty",fact:"Il mondo della skincare parla inglese! 'Cleanser' è il detergente, 'moisturizer' la crema idratante, 'serum' il siero. E 'glow' — la luminosità della pelle — è la parola che senti ovunque: 'glowing skin' è il sogno di tutte! 'Routine' la conosci già — è uguale in italiano!",factEn:"The skincare world speaks English! 'Cleanser' is the detergente, 'moisturizer' the crema idratante, 'serum' the siero. And 'glow' — the radiance of the skin — is everywhere: 'glowing skin' is everyone's dream!",words:[
+  {emoji:"🧴",title:"Skincare & Bellezza",titleEn:"Skincare & Beauty",fact:"Il mondo della skincare parla inglese! 'Cleanser' è il detergente, 'moisturizer' la crema idratante, 'serum' il siero. E 'glow'  la luminosità della pelle  è la parola che senti ovunque: 'glowing skin' è il sogno di tutte! 'Routine' la conosci già  è uguale in italiano!",factEn:"The skincare world speaks English! 'Cleanser' is the detergente, 'moisturizer' the crema idratante, 'serum' the siero. And 'glow'  the radiance of the skin  is everywhere: 'glowing skin' is everyone's dream!",words:[
     {en:"glow",it:"luminosità / splendore",ex:"Your skin has a beautiful glow."},
     {en:"moisturizer",it:"crema idratante",ex:"Apply moisturizer twice a day."},
     {en:"cleanser",it:"detergente",ex:"Use a gentle cleanser at night."},
@@ -497,7 +497,7 @@ const FACTS=[
     {en:"radiant",it:"raggiante",ex:"You look absolutely radiant today."},
     {en:"gentle",it:"delicato",ex:"Always be gentle with your skin."},
   ]},
-  {emoji:"🍵",title:"Tè & Tisane",titleEn:"Tea & Herbal Teas",fact:"Il rito del tè ha un vocabolario delizioso! 'To brew' è preparare in infusione, 'steep' è lasciare in infusione la bustina. 'Herbal tea' è la tisana, 'soothing' (calmante) descrive perfettamente una camomilla la sera. Una tazza calda è 'a cozy hug in a cup' — un abbraccio accogliente in tazza!",factEn:"The tea ritual has a delicious vocabulary! 'To brew' is preparare, 'steep' is to leave the bag in infusion. 'Herbal tea' is tisana, 'soothing' describes a chamomile perfectly. A warm cup is 'a cozy hug in a cup'!",words:[
+  {emoji:"🍵",title:"Tè & Tisane",titleEn:"Tea & Herbal Teas",fact:"Il rito del tè ha un vocabolario delizioso! 'To brew' è preparare in infusione, 'steep' è lasciare in infusione la bustina. 'Herbal tea' è la tisana, 'soothing' (calmante) descrive perfettamente una camomilla la sera. Una tazza calda è 'a cozy hug in a cup'  un abbraccio accogliente in tazza!",factEn:"The tea ritual has a delicious vocabulary! 'To brew' is preparare, 'steep' is to leave the bag in infusion. 'Herbal tea' is tisana, 'soothing' describes a chamomile perfectly. A warm cup is 'a cozy hug in a cup'!",words:[
     {en:"brew",it:"preparare in infusione",ex:"I brew a cup of tea every evening."},
     {en:"steep",it:"lasciare in infusione",ex:"Let the tea steep for five minutes."},
     {en:"herbal tea",it:"tisana",ex:"Herbal tea helps me relax at night."},
@@ -507,7 +507,7 @@ const FACTS=[
     {en:"blend",it:"miscela",ex:"This is my favorite tea blend."},
     {en:"kettle",it:"bollitore",ex:"The kettle is boiling, the tea is ready!"},
   ]},
-  {emoji:"🐱",title:"Gatti & Animali",titleEn:"Cats & Pets",fact:"Gli amanti dei gatti hanno parole tutte loro in inglese! 'Purr' è le fusa — il suono più rilassante del mondo. 'Cuddle' è coccolare, 'fluffy' è morbidoso e peloso. E 'kitten' è il gattino. Sai che 'pussy' significa anche gatto? Per questo i napoletani ridono! 😼",factEn:"Cat lovers have their own English words! 'Purr' is le fusa — the most relaxing sound. 'Cuddle' is coccolare, 'fluffy' is morbidoso. And 'kitten' is the gattino. Did you know 'pussy' also means cat?",words:[
+  {emoji:"🐱",title:"Gatti & Animali",titleEn:"Cats & Pets",fact:"Gli amanti dei gatti hanno parole tutte loro in inglese! 'Purr' è le fusa  il suono più rilassante del mondo. 'Cuddle' è coccolare, 'fluffy' è morbidoso e peloso. E 'kitten' è il gattino. Sai che 'pussy' significa anche gatto? Per questo i napoletani ridono! 😼",factEn:"Cat lovers have their own English words! 'Purr' is le fusa  the most relaxing sound. 'Cuddle' is coccolare, 'fluffy' is morbidoso. And 'kitten' is the gattino. Did you know 'pussy' also means cat?",words:[
     {en:"purr",it:"fare le fusa",ex:"The cat purrs when she is happy."},
     {en:"cuddle",it:"coccolare",ex:"I love to cuddle with my cat."},
     {en:"fluffy",it:"morbidoso / peloso",ex:"Her cat is so soft and fluffy."},
@@ -531,13 +531,13 @@ const FACTS=[
 
 const TV=[
   {show:"The Good Place",emoji:"😇",phrases:[
-    {en:"Everything is fine.",it:"Va tutto bene.",note:"Usata in modo ironico — la situazione NON va bene per niente! 😄"},
+    {en:"Everything is fine.",it:"Va tutto bene.",note:"Usata in modo ironico  la situazione NON va bene per niente! 😄"},
     {en:"You are a good person.",it:"Sei una brava persona.",note:"Una delle frasi più belle e toccanti dell'intera serie."},
     {en:"What the fork?!",it:"Ma cosa cavolo?!",note:"Fork = forchetta, ma qui sostituisce una parolaccia in modo geniale!"},
-    {en:"I need to think about this.",it:"Ho bisogno di rifletterci.",note:"Utilissima nella vita reale — prenditi il tuo tempo!"},
+    {en:"I need to think about this.",it:"Ho bisogno di rifletterci.",note:"Utilissima nella vita reale  prenditi il tuo tempo!"},
     {en:"I want to be a better person.",it:"Voglio essere una persona migliore.",note:"Il cuore dell'intera serie in una frase."},
     {en:"We can figure this out together.",it:"Possiamo capirlo insieme.",note:"'Figure out' = capire/risolvere. Usatissima!"},
-    {en:"I made a mistake.",it:"Ho fatto un errore.",note:"Importante saperla dire — tutti sbagliano!"},
+    {en:"I made a mistake.",it:"Ho fatto un errore.",note:"Importante saperla dire  tutti sbagliano!"},
     {en:"This is a beautiful place.",it:"Questo è un posto bellissimo.",note:"Semplice, chiara, usabile ovunque."},
   ]},
   {show:"Ginny & Georgia",emoji:"💅",phrases:[
@@ -548,33 +548,33 @@ const TV=[
     {en:"I feel lost.",it:"Mi sento persa.",note:"'Lost' = perso/a. Si usa tanto in senso figurato."},
     {en:"We can do this together.",it:"Possiamo farcela insieme.",note:"Motivazionale e bellissima!"},
     {en:"I just need some space.",it:"Ho solo bisogno di spazio.",note:"Fondamentale saper dire i propri bisogni."},
-    {en:"You have no idea what I've been through.",it:"Non sai cosa ho passato.",note:"Drammatica ma utilissima — usata tantissimo!"},
+    {en:"You have no idea what I've been through.",it:"Non sai cosa ho passato.",note:"Drammatica ma utilissima  usata tantissimo!"},
   ]},
   {show:"Bridgerton",emoji:"🌹",phrases:[
-    {en:"I burn for you.",it:"Brucio per te.",note:"La frase più famosa di Simon — pura poesia romantica!"},
-    {en:"You are the most beautiful woman in the room.",it:"Sei la donna più bella della stanza.",note:"Elegante e romantica — usabile ovunque! 😄"},
+    {en:"I burn for you.",it:"Brucio per te.",note:"La frase più famosa di Simon  pura poesia romantica!"},
+    {en:"You are the most beautiful woman in the room.",it:"Sei la donna più bella della stanza.",note:"Elegante e romantica  usabile ovunque! 😄"},
     {en:"My heart belongs to you.",it:"Il mio cuore ti appartiene.",note:"Classico romanzo rosa in cinque parole."},
-    {en:"I cannot imagine a world without you.",it:"Non riesco a immaginare un mondo senza di te.",note:"Lunga ma bellissima — imparala per gradi!"},
+    {en:"I cannot imagine a world without you.",it:"Non riesco a immaginare un mondo senza di te.",note:"Lunga ma bellissima  imparala per gradi!"},
     {en:"You have bewitched me.",it:"Mi hai stregato/a.",note:"'Bewitch' = stregare. Parola magica!"},
-    {en:"Shall we dance?",it:"Balliamo?",note:"Elegante e classica — perfetta per una festa!"},
+    {en:"Shall we dance?",it:"Balliamo?",note:"Elegante e classica  perfetta per una festa!"},
     {en:"I have never felt this way before.",it:"Non ho mai provato una cosa del genere.",note:"Romantica e utilissima nella vita reale."},
     {en:"You are unlike anyone I have ever met.",it:"Sei diversa da chiunque io abbia mai incontrato.",note:"Il massimo complimento!"},
   ]},
   {show:"Outer Banks",emoji:"🏄",phrases:[
-    {en:"We are the Pogues.",it:"Siamo i Pogues.",note:"'Pogues' è il nome del gruppo di amici — usa 'We are' per presentare te e i tuoi amici!"},
+    {en:"We are the Pogues.",it:"Siamo i Pogues.",note:"'Pogues' è il nome del gruppo di amici  usa 'We are' per presentare te e i tuoi amici!"},
     {en:"I'm not gonna give up on you.",it:"Non ti abbandonerò.",note:"'Give up on someone' = abbandonare qualcuno. 'Gonna' è il colloquiale americano di 'going to'."},
-    {en:"She is my person.",it:"Lei è la mia persona.",note:"Frase iconica usata anche in Grey's Anatomy — indica la persona più importante della tua vita!"},
-    {en:"Stay gold.",it:"Rimani autentica.",note:"'Gold' qui non è l'oro — significa puro e autentico. Viene da una poesia di Robert Frost!"},
-    {en:"I'll always come back to you.",it:"Tornerò sempre da te.",note:"'I'll' = I will. Una delle promesse più romantiche in inglese — perfetta per Bridgerton! 🌹"},
+    {en:"She is my person.",it:"Lei è la mia persona.",note:"Frase iconica usata anche in Grey's Anatomy  indica la persona più importante della tua vita!"},
+    {en:"Stay gold.",it:"Rimani autentica.",note:"'Gold' qui non è l'oro  significa puro e autentico. Viene da una poesia di Robert Frost!"},
+    {en:"I'll always come back to you.",it:"Tornerò sempre da te.",note:"'I'll' = I will. Una delle promesse più romantiche in inglese  perfetta per Bridgerton! 🌹"},
     {en:"We're not done yet.",it:"Non abbiamo ancora finito.",note:"'Done' = finito. 'Not done yet' = non ancora finito. Si usa tantissimo nella vita reale!"},
     {en:"The treasure is real.",it:"Il tesoro è reale.",note:"'Real' = reale/vero. Attenzione: 'really' come avverbio significa 'davvero'!"},
     {en:"I trust you with my life.",it:"Ti affido la mia vita.",note:"'Trust someone with something' = fidarsi di qualcuno per qualcosa. Bella e intensa!"},
   ]},
   {show:"Never Have I Ever",emoji:"🌸",phrases:[
-    {en:"You deserve good things.",it:"Meriti cose belle.",note:"'Deserve' = meritare. Una delle parole più belle in inglese — usala con te stessa ogni giorno!"},
+    {en:"You deserve good things.",it:"Meriti cose belle.",note:"'Deserve' = meritare. Una delle parole più belle in inglese  usala con te stessa ogni giorno!"},
     {en:"I'm going to have a great year.",it:"Avrò un anno fantastico.",note:"'Going to' si usa per piani certi. 'Great' = fantastico. Dillo ogni mattina allo specchio!"},
     {en:"Stop trying to be perfect.",it:"Smettila di cercare di essere perfetta.",note:"'Stop + -ing' = smettila di fare qualcosa. Una struttura importantissima in inglese!"},
-    {en:"It's okay to ask for help.",it:"Va bene chiedere aiuto.",note:"'It's okay to...' + verbo infinito. Formula utilissima — impara questa struttura!"},
+    {en:"It's okay to ask for help.",it:"Va bene chiedere aiuto.",note:"'It's okay to...' + verbo infinito. Formula utilissima  impara questa struttura!"},
     {en:"You matter to me.",it:"Sei importante per me.",note:"'To matter' NON è 'materia'! Significa essere importante. 'You matter' è bellissima!"},
     {en:"She is stronger than she thinks.",it:"È più forte di quanto pensi.",note:"'Stronger than...' = più forte di... I comparativi in inglese si fanno con -er o 'more'!"},
     {en:"I don't know how to do this.",it:"Non so come farlo.",note:"'I don't know how to...' + infinito. Una delle strutture più utili dell'inglese quotidiano!"},
@@ -582,13 +582,13 @@ const TV=[
   ]},
   {show:"Wednesday",emoji:"🖤",phrases:[
     {en:"I don't have friends. I have accomplices.",it:"Non ho amici. Ho complici.",note:"Frase iconica di Wednesday! 'Accomplice' = complice. Molto più intrigante di 'friend'! 🖤"},
-    {en:"Normal is an illusion.",it:"Il normale è un'illusione.",note:"'Illusion' = illusione — stessa parola! E 'normal' si pronuncia NOR-mal."},
+    {en:"Normal is an illusion.",it:"Il normale è un'illusione.",note:"'Illusion' = illusione  stessa parola! E 'normal' si pronuncia NOR-mal."},
     {en:"I like to follow my own path.",it:"Mi piace seguire la mia strada.",note:"'Follow your own path' = seguire la propria strada. Frase motivazionale bellissima!"},
     {en:"Don't underestimate me.",it:"Non sottovalutarmi.",note:"'Underestimate' = sottovalutare. 'Under' in inglese spesso significa 'sotto' o 'meno del dovuto'."},
-    {en:"The truth always comes out.",it:"La verità viene sempre a galla.",note:"'Come out' = venire fuori. 'The truth comes out' — si usa tantissimo nelle serie!"},
+    {en:"The truth always comes out.",it:"La verità viene sempre a galla.",note:"'Come out' = venire fuori. 'The truth comes out'  si usa tantissimo nelle serie!"},
     {en:"My gift is also my curse.",it:"Il mio dono è anche la mia maledizione.",note:"'Gift' = dono. 'Curse' = maledizione. Perfetto per chi ama cristalli e magia! 💜"},
     {en:"I am an acquired taste.",it:"Sono un gusto acquisito.",note:"'Acquired taste' = qualcosa che non piace subito ma si impara ad apprezzare. Elegantissima!"},
-    {en:"I don't need your approval.",it:"Non ho bisogno della tua approvazione.",note:"'Approval' = approvazione. 'I don't need' = non ho bisogno. Usatissima — e molto Wednesday!"},
+    {en:"I don't need your approval.",it:"Non ho bisogno della tua approvazione.",note:"'Approval' = approvazione. 'I don't need' = non ho bisogno. Usatissima  e molto Wednesday!"},
   ]},
   {show:"Heartstopper",emoji:"🍂",phrases:[
     {en:"I just want to be happy.",it:"Voglio solo essere felice.",note:"'Just' qui significa 'semplicemente'. 'I just want to...' = voglio solo... Dolcissima!"},
@@ -596,48 +596,48 @@ const TV=[
     {en:"It's okay to be yourself.",it:"Va bene essere se stessi.",note:"'Be yourself' = essere se stessi. Una delle prime cose da imparare in inglese!"},
     {en:"You make me feel like myself.",it:"Mi fai sentire me stessa.",note:"'Make someone feel' = far sentire qualcuno. Struttura bellissima e romantica!"},
     {en:"You are enough.",it:"Sei abbastanza.",note:"'Enough' = abbastanza. Due parole, significato immenso. Tatuatela! 🌸"},
-    {en:"Friendship is everything.",it:"L'amicizia è tutto.",note:"'Friendship' = amicizia — si forma da 'friend' + '-ship'. Tanti sostantivi astratti finiscono così!"},
-    {en:"Just breathe.",it:"Respira soltanto.",note:"Semplice e potente! Perfetta anche durante il pilates — 'just breathe, engage your core!' 🧘"},
-    {en:"I think about you all the time.",it:"Penso a te continuamente.",note:"'All the time' = sempre, continuamente. Molto più enfatico di 'always' — super romantico!"},
+    {en:"Friendship is everything.",it:"L'amicizia è tutto.",note:"'Friendship' = amicizia  si forma da 'friend' + '-ship'. Tanti sostantivi astratti finiscono così!"},
+    {en:"Just breathe.",it:"Respira soltanto.",note:"Semplice e potente! Perfetta anche durante il pilates  'just breathe, engage your core!' 🧘"},
+    {en:"I think about you all the time.",it:"Penso a te continuamente.",note:"'All the time' = sempre, continuamente. Molto più enfatico di 'always'  super romantico!"},
   ]},
   {show:"Grey's Anatomy",emoji:"🏥",phrases:[
-    {en:"She is my person.",it:"Lei è la mia persona.",note:"La frase iconica di Meredith e Cristina — indica la persona più importante della tua vita!"},
+    {en:"She is my person.",it:"Lei è la mia persona.",note:"La frase iconica di Meredith e Cristina  indica la persona più importante della tua vita!"},
     {en:"It's a beautiful day to save lives.",it:"È una bella giornata per salvare vite.",note:"La frase di apertura del dottor Sheperd. 'To save' = salvare. Bella da usare ogni mattina!"},
-    {en:"Have some fire. Be unstoppable.",it:"Abbi del fuoco dentro. Sii inarrestabile.",note:"'Unstoppable' = inarrestabile. 'Fire' qui non è fuoco letterale — è passione e determinazione!"},
-    {en:"I am the sun.",it:"Io sono il sole.",note:"Cristina a Meredith — quando qualcuno ti oscura, ricordati chi sei. Potentissima!"},
+    {en:"Have some fire. Be unstoppable.",it:"Abbi del fuoco dentro. Sii inarrestabile.",note:"'Unstoppable' = inarrestabile. 'Fire' qui non è fuoco letterale  è passione e determinazione!"},
+    {en:"I am the sun.",it:"Io sono il sole.",note:"Cristina a Meredith  quando qualcuno ti oscura, ricordati chi sei. Potentissima!"},
     {en:"Don't let what he wants eclipse what you need.",it:"Non lasciare che quello che vuole lui eclissi quello di cui hai bisogno.",note:"'Eclipse' = eclissare. Perfetta parola per chi ama la luna! 🌙"},
     {en:"You're my best friend.",it:"Sei la mia migliore amica.",note:"'Best friend' = migliore amica. 'Best' = il/la migliore. Semplicissima e bellissima!"},
     {en:"I have to believe that the best is still out there.",it:"Devo credere che il meglio debba ancora arrivare.",note:"'Still out there' = ancora là fuori, non ancora arrivato. Molto ottimista!"},
     {en:"We have to be our own kind of normal.",it:"Dobbiamo essere la nostra versione del normale.",note:"'Our own kind of' = la nostra versione di. Struttura bellissima e adattabile!"},
   ]},
   {show:"Emily in Paris",emoji:"🗼",phrases:[
-    {en:"Paris is always a good idea.",it:"Parigi è sempre una buona idea.",note:"La citazione più famosa su Parigi — perfetta per Instagram! 📸"},
-    {en:"I don't speak French, but I speak fashion.",it:"Non parlo francese, ma parlo di moda.",note:"Usa 'I speak + something' in senso figurato — significa capire qualcosa profondamente!"},
+    {en:"Paris is always a good idea.",it:"Parigi è sempre una buona idea.",note:"La citazione più famosa su Parigi  perfetta per Instagram! 📸"},
+    {en:"I don't speak French, but I speak fashion.",it:"Non parlo francese, ma parlo di moda.",note:"Usa 'I speak + something' in senso figurato  significa capire qualcosa profondamente!"},
     {en:"Every day is a chance to reinvent yourself.",it:"Ogni giorno è un'occasione per reinventarsi.",note:"'Reinvent yourself' = reinventarsi. 'Every day is a chance to...' = ogni giorno è un'occasione per..."},
     {en:"You only get one first impression.",it:"Hai solo una prima impressione.",note:"'First impression' = prima impressione. 'You only get one' = ne hai soltanto una!"},
     {en:"I came here to work, not to make friends.",it:"Sono venuta qui per lavorare, non per fare amicizie.",note:"'To make friends' = fare amicizia. Alla fine Emily fa entrambe le cose! 😄"},
     {en:"Life is short. Eat the croissant.",it:"La vita è breve. Mangia il croissant.",note:"'Life is short' = la vita è breve. Una delle frasi più usate in inglese per giustificare qualcosa!"},
     {en:"I love it here, even when it's hard.",it:"Amo questo posto, anche quando è difficile.",note:"'Even when it's hard' = anche quando è difficile. 'Even when' è una struttura molto utile!"},
-    {en:"The best things in life are unexpected.",it:"Le cose migliori della vita sono inaspettate.",note:"'Unexpected' = inaspettato. 'The best things in life are...' — struttura bellissima e flessibile!"},
+    {en:"The best things in life are unexpected.",it:"Le cose migliori della vita sono inaspettate.",note:"'Unexpected' = inaspettato. 'The best things in life are...'  struttura bellissima e flessibile!"},
   ]},
   {show:"One Tree Hill",emoji:"🌳",phrases:[
-    {en:"One day you'll leave this world behind.",it:"Un giorno lascerai questo mondo.",note:"Dall'intro della serie — poetica e intensa. 'Leave behind' = lasciare alle spalle."},
+    {en:"One day you'll leave this world behind.",it:"Un giorno lascerai questo mondo.",note:"Dall'intro della serie  poetica e intensa. 'Leave behind' = lasciare alle spalle."},
     {en:"It's the oldest story in the world.",it:"È la storia più vecchia del mondo.",note:"'The oldest story in the world' = una situazione che si ripete nella storia dell'umanità."},
     {en:"Lucas, I'm the girl for you.",it:"Lucas, sono la ragazza giusta per te.",note:"Memorabile dichiarazione di Peyton. 'The girl for you' = la ragazza giusta per te!"},
     {en:"Don't say I never gave you anything.",it:"Non dire che non ti ho mai dato niente.",note:"'Don't say I never...' = non dire che non ho mai... Ironica e usatissima tra amici!"},
-    {en:"People always leave.",it:"Le persone se ne vanno sempre.",note:"La frase di Peyton. 'Leave' = andarsene. Triste ma realistica — usata anche nella vita reale!"},
+    {en:"People always leave.",it:"Le persone se ne vanno sempre.",note:"La frase di Peyton. 'Leave' = andarsene. Triste ma realistica  usata anche nella vita reale!"},
     {en:"Find something you're passionate about.",it:"Trova qualcosa per cui sei appassionata.",note:"'Passionate about' = appassionata di. Struttura importantissima: 'I'm passionate about...'"},
-    {en:"The rest of your life is being shaped right now.",it:"Il resto della tua vita si sta formando adesso.",note:"'Being shaped' = si sta formando / plasmando. Il gerundio passivo — struttura avanzata!"},
+    {en:"The rest of your life is being shaped right now.",it:"Il resto della tua vita si sta formando adesso.",note:"'Being shaped' = si sta formando / plasmando. Il gerundio passivo  struttura avanzata!"},
     {en:"You're not alone in this.",it:"Non sei sola in questo.",note:"'You're not alone in this' = non sei sola in questa situazione. Diversa da 'you're not alone'!"},
   ]},
   {show:"Gilmore Girls",emoji:"☕",phrases:[
-    {en:"Coffee, coffee, coffee.",it:"Caffè, caffè, caffè.",note:"La frase simbolo di Lorelai! Ripetere una parola tre volte dà enfasi — molto usato nell'inglese parlato. ☕"},
+    {en:"Coffee, coffee, coffee.",it:"Caffè, caffè, caffè.",note:"La frase simbolo di Lorelai! Ripetere una parola tre volte dà enfasi  molto usato nell'inglese parlato. ☕"},
     {en:"I need caffeine to survive.",it:"Ho bisogno di caffeina per sopravvivere.",note:"'To survive' = sopravvivere. 'I need ___ to survive' è una struttura divertente e iperbolica!"},
     {en:"You're my best friend.",it:"Sei la mia migliore amica.",note:"Il legame tra Lorelai e Rory. 'Best friend' = migliore amico/a. Semplice e bellissima!"},
-    {en:"I love you, you idiot.",it:"Ti voglio bene, idiota.",note:"In inglese 'idiot' tra amici è affettuoso! Il tono cambia tutto — qui è puro amore. 💕"},
+    {en:"I love you, you idiot.",it:"Ti voglio bene, idiota.",note:"In inglese 'idiot' tra amici è affettuoso! Il tono cambia tutto  qui è puro amore. 💕"},
     {en:"Where you lead, I will follow.",it:"Dove vai tu, ti seguo.",note:"Dalla canzone della sigla! 'Where you lead' = dove guidi tu. 'I will follow' = ti seguirò."},
-    {en:"I'm not good at being told what to do.",it:"Non sono brava a farmi dire cosa fare.",note:"'To be told what to do' = farsi dire cosa fare. Struttura passiva avanzata — molto utile!"},
-    {en:"People are particularly stupid today.",it:"Le persone sono particolarmente stupide oggi.",note:"'Particularly' = particolarmente. Una parola elegante per dare enfasi — molto Lorelai! 😄"},
+    {en:"I'm not good at being told what to do.",it:"Non sono brava a farmi dire cosa fare.",note:"'To be told what to do' = farsi dire cosa fare. Struttura passiva avanzata  molto utile!"},
+    {en:"People are particularly stupid today.",it:"Le persone sono particolarmente stupide oggi.",note:"'Particularly' = particolarmente. Una parola elegante per dare enfasi  molto Lorelai! 😄"},
     {en:"Oy with the poodles already!",it:"E dai, basta!",note:"Frase nonsense iconica della serie per dire 'cambiamo argomento!'. 'Already' a fine frase = insofferenza!"},
   ]},
   {show:"Friends",emoji:"🛋️",phrases:[
@@ -648,14 +648,14 @@ const TV=[
     {en:"It's a moo point.",it:"È un punto inutile.",note:"Joey confonde 'moot point' (punto irrilevante) con 'moo' (il verso della mucca)! Errore esilarante. 🐮"},
     {en:"Pivot! Pivot!",it:"Gira! Gira!",note:"Ross che sposta il divano! 'Pivot' = ruotare su un perno. Una delle scene più divertenti di sempre!"},
     {en:"I know!",it:"Lo so!",note:"Il tormentone di Monica, gridato con entusiasmo. Semplice ma potentissimo nel tono giusto!"},
-    {en:"Welcome to the real world. It sucks.",it:"Benvenuta nel mondo reale. Fa schifo.",note:"'It sucks' = fa schifo (informale). Detto da Monica a Rachel — ironico ma vero! 😅"},
+    {en:"Welcome to the real world. It sucks.",it:"Benvenuta nel mondo reale. Fa schifo.",note:"'It sucks' = fa schifo (informale). Detto da Monica a Rachel  ironico ma vero! 😅"},
   ]},
   {show:"Sex and the City",emoji:"👠",phrases:[
     {en:"I couldn't help but wonder...",it:"Non potei fare a meno di chiedermi...",note:"L'apertura di ogni riflessione di Carrie! 'I couldn't help but ___' = non potei fare a meno di... Elegantissima!"},
     {en:"I'm looking for love. Real love.",it:"Cerco l'amore. Quello vero.",note:"'To look for' = cercare (phrasal verb!). Ripetere 'love' aggiunge intensità."},
-    {en:"They're my soulmates.",it:"Sono le mie anime gemelle.",note:"Carrie sulle sue amiche. 'Soulmate' non è solo romantico — vale anche per le amiche del cuore! 💕"},
+    {en:"They're my soulmates.",it:"Sono le mie anime gemelle.",note:"Carrie sulle sue amiche. 'Soulmate' non è solo romantico  vale anche per le amiche del cuore! 💕"},
     {en:"Maybe some women aren't meant to be tamed.",it:"Forse certe donne non sono fatte per essere addomesticate.",note:"'Meant to be' = destinato a essere. 'Tamed' = addomesticato. Frase femminista iconica!"},
-    {en:"Shopping is my cardio.",it:"Lo shopping è il mio cardio.",note:"Battuta iconica! 'Cardio' = attività cardio (palestra). Ironia pura — perfetta per le amanti della moda! 👠"},
+    {en:"Shopping is my cardio.",it:"Lo shopping è il mio cardio.",note:"Battuta iconica! 'Cardio' = attività cardio (palestra). Ironia pura  perfetta per le amanti della moda! 👠"},
     {en:"The most exciting relationship is with yourself.",it:"La relazione più emozionante è quella con te stessa.",note:"'With yourself' = con te stessa. Un messaggio di self-love bellissimo!"},
     {en:"I will never be the woman with the perfect hair.",it:"Non sarò mai la donna dai capelli perfetti.",note:"'I will never be' = non sarò mai. Il futuro con 'will' per parlare di sé con ironia e dolcezza."},
     {en:"Friendship never goes out of style.",it:"L'amicizia non passa mai di moda.",note:"'To go out of style' = passare di moda (phrasal verb). Perfetta per le fashion lover! ✨"},
@@ -666,8 +666,8 @@ const PROVERBS=[
   {en:"Every cockroach is pretty to his mother",
    nap:"Ogn scarrafon è bell a mamma soij",
    it:"Ogni scarafaggio è bello per la sua mamma",
-   meaning:"Ogni madre vede sempre il meglio nei suoi figli — non importa come siano agli occhi degli altri. L'amore materno è cieco e bellissimo!",
-   meaningEn:"Every mother always sees the best in her children — no matter how they appear to others. A mother's love is beautifully blind!",
+   meaning:"Ogni madre vede sempre il meglio nei suoi figli  non importa come siano agli occhi degli altri. L'amore materno è cieco e bellissimo!",
+   meaningEn:"Every mother always sees the best in her children  no matter how they appear to others. A mother's love is beautifully blind!",
    words:[
      {en:"cockroach",it:"scarafaggio",ex:"Every cockroach is pretty to his mother."},
      {en:"pretty",it:"bello / carino",ex:"The moonlight looks so pretty tonight."},
@@ -753,8 +753,8 @@ const PROVERBS=[
   {en:"Bit by bit the hen fills her belly",
    nap:"A poc a poc a gallin se chién a vozz",
    it:"A poco a poco la gallina si riempie il gozzo",
-   meaning:"I grandi risultati si ottengono con piccoli passi costanti. Una parola d'inglese alla volta e un giorno parlerai benissimo — proprio come la gallina che becca un chicco alla volta!",
-   meaningEn:"Great results come from small, steady steps. One English word at a time and one day you'll speak perfectly — just like the hen pecking one grain at a time!",
+   meaning:"I grandi risultati si ottengono con piccoli passi costanti. Una parola d'inglese alla volta e un giorno parlerai benissimo  proprio come la gallina che becca un chicco alla volta!",
+   meaningEn:"Great results come from small, steady steps. One English word at a time and one day you'll speak perfectly  just like the hen pecking one grain at a time!",
    words:[
      {en:"hen",it:"gallina",ex:"The hen pecks at the grain."},
      {en:"bit by bit",it:"a poco a poco",ex:"Bit by bit, you are getting better."},
@@ -786,7 +786,7 @@ const GRAMMAR=[
       {type:"reading",title:"The new girl in town",emoji:"💅",
         text:"Ginny is fifteen years old. She and her mother Georgia move to a small town called Wellsbury. Ginny is nervous because she is the new girl at school. On her first day she meets Maxine, a funny and friendly girl. Maxine introduces her to the group, and soon Ginny feels less alone. Georgia wants a fresh start and a better life for her family.",
         questions:[
-          {q:"How old is Ginny?",options:["Fifteen","Thirteen","Eighteen"],answer:"Fifteen",note:"\"Ginny is fifteen years old.\" — la risposta è nella prima frase!"},
+          {q:"How old is Ginny?",options:["Fifteen","Thirteen","Eighteen"],answer:"Fifteen",note:"\"Ginny is fifteen years old.\"  la risposta è nella prima frase!"},
           {q:"Why is Ginny nervous?",options:["She is the new girl at school","She lost her phone","She is sick"],answer:"She is the new girl at school",note:"\"...because she is the new girl at school.\" 'Because' = perché."},
           {q:"What does Georgia want?",options:["A fresh start for her family","A new car","To leave Ginny"],answer:"A fresh start for her family",note:"\"Georgia wants a fresh start...\" 'Fresh start' = nuovo inizio."},
         ]},
@@ -864,7 +864,7 @@ const GRAMMAR=[
       {type:"choice",q:"She ___ start a new book this weekend.",options:["is going to","will to","goes to"],answer:"is going to",it:"Comincerà un nuovo libro questo fine settimana.",note:"Piano già deciso → 'is going to'. She/he/it → 'is'. 📚"},
       {type:"reorder",tokens:["I","will","always","love","you"],answer:"I will always love you",it:"Ti amerò per sempre.",note:"L'avverbio 'always' va tra 'will' e il verbo: will + always + love. Pura Bridgerton! 🌹"},
       {type:"fill",q:"We ___ travel to Paris next summer.",verb:"usa 'be going to' · noi",hint:"piano deciso · noi",answer:"are going to",it:"Andremo a Parigi la prossima estate.",note:"'We' → are going to. Un piano deciso, proprio come Emily in Paris! 🗼"},
-      {type:"choice",q:"Don't worry — everything ___ be okay.",options:["will","is going","goes"],answer:"will",it:"Non preoccuparti — andrà tutto bene.",note:"Una rassicurazione sul momento → 'will' + be. 'Everything will be okay' — usatissima! 💗"},
+      {type:"choice",q:"Don't worry  everything ___ be okay.",options:["will","is going","goes"],answer:"will",it:"Non preoccuparti  andrà tutto bene.",note:"Una rassicurazione sul momento → 'will' + be. 'Everything will be okay'  usatissima! 💗"},
       {type:"reading",title:"A wish under the new moon",emoji:"🌑",
         text:"Tonight is the new moon. Emanuela is going to write her intentions in her journal. She believes the new moon is the perfect time for new beginnings. 'This year I will learn English,' she writes. 'I am going to practice a little every day.' She lights a candle and holds her clear quartz. She feels calm and hopeful. Tomorrow she will start her new routine.",
         questions:[
@@ -889,11 +889,11 @@ const GRAMMAR=[
       {type:"reorder",tokens:["She","is","wearing","a","navy","dress"],answer:"She is wearing a navy dress",it:"Sta indossando un vestito blu marino.",note:"Schema: soggetto + is/are + verbo-ing + complemento. 'Navy' = blu marino!"},
       {type:"fill",q:"We ___ to relaxing music right now.",verb:"to listen · noi · ORA",hint:"stiamo ascoltando",answer:"are listening",it:"Stiamo ascoltando musica rilassante proprio ora.",note:"'We' → are listening. Ricorda: si dice 'listen TO music'. 🎵"},
       {type:"reading",title:"A moment at the beach",emoji:"🌊",
-        text:"It is a warm evening at the beach. Emanuela is sitting on the sandy shore. The waves are rolling gently and a soft breeze is blowing. She is holding a cup of herbal tea and watching the sunset. Her best friend is taking photos of the pink sky. They are not talking much — they are just enjoying the peaceful moment together.",
+        text:"It is a warm evening at the beach. Emanuela is sitting on the sandy shore. The waves are rolling gently and a soft breeze is blowing. She is holding a cup of herbal tea and watching the sunset. Her best friend is taking photos of the pink sky. They are not talking much  they are just enjoying the peaceful moment together.",
         questions:[
           {q:"Where is Emanuela sitting?",options:["On the sandy shore","On a chair","In a café"],answer:"On the sandy shore",note:"\"...is sitting on the sandy shore.\" 'Shore' = riva. 🏖️"},
           {q:"What is her friend doing?",options:["Taking photos","Swimming","Sleeping"],answer:"Taking photos",note:"\"Her best friend is taking photos of the pink sky.\""},
-          {q:"Are they talking a lot?",options:["No, they are enjoying the moment","Yes, all the time","No, they are arguing"],answer:"No, they are enjoying the moment",note:"\"They are not talking much — they are just enjoying the moment.\" Forma negativa: are + NOT + verbo-ing."},
+          {q:"Are they talking a lot?",options:["No, they are enjoying the moment","Yes, all the time","No, they are arguing"],answer:"No, they are enjoying the moment",note:"\"They are not talking much  they are just enjoying the moment.\" Forma negativa: are + NOT + verbo-ing."},
         ]},
     ],
   },
@@ -906,7 +906,7 @@ const GRAMMAR=[
     intro:"Tre piccole parole importantissime ✨ Usa 'a' davanti a consonante (a crystal), 'an' davanti a suono vocalico (an amethyst, an hour). Usa 'the' quando è una cosa specifica e unica: 'the moon', 'the sun'. Piccoli ma fondamentali!",
     exercises:[
       {type:"choice",q:"I bought ___ amethyst at the crystal shop.",options:["a","an","the"],answer:"an",it:"Ho comprato un'ametista al negozio di cristalli.",note:"'amethyst' inizia con suono vocalico (a-) → 'an'. 💜"},
-      {type:"fill",q:"Look at ___ moon tonight — it's full!",verb:"articolo · cosa unica",hint:"ce n'è una sola",answer:"the",it:"Guarda la luna stasera — è piena!",note:"La luna è unica → 'the moon'. Per le cose uniche si usa sempre 'the'! 🌕"},
+      {type:"fill",q:"Look at ___ moon tonight  it's full!",verb:"articolo · cosa unica",hint:"ce n'è una sola",answer:"the",it:"Guarda la luna stasera  è piena!",note:"La luna è unica → 'the moon'. Per le cose uniche si usa sempre 'the'! 🌕"},
       {type:"choice",q:"She is reading ___ romance novel.",options:["a","an","the"],answer:"a",it:"Sta leggendo un romanzo rosa.",note:"'romance' inizia con consonante (r-) → 'a'. Un romanzo qualsiasi, non specifico. 📖"},
       {type:"choice",q:"I drink ___ cup of tea every evening.",options:["a","an","the"],answer:"a",it:"Bevo una tazza di tè ogni sera.",note:"'cup' inizia con consonante → 'a cup'. Una tazza qualunque. 🍵"},
       {type:"fill",q:"Pilates class lasts ___ hour.",verb:"a / an?",hint:"'hour' ha la h muta!",answer:"an",it:"La lezione di pilates dura un'ora.",note:"'hour' ha la H MUTA: si pronuncia 'aur' → suono vocalico → 'an hour'! Trabocchetto classico. ⏰"},
@@ -921,14 +921,14 @@ const GRAMMAR=[
     color:"#2e7d32",
     intro:"I modali esprimono possibilità e doveri 💫 'can' = potere/sapere fare, 'must' = dovere (obbligo forte), 'should' = dovere (consiglio). Regola d'oro: dopo il modale il verbo è SEMPRE alla base, senza 'to' e senza -s!",
     exercises:[
-      {type:"choice",q:"You ___ set your boundaries — it's healthy.",options:["should","musts","cans"],answer:"should",it:"Dovresti stabilire i tuoi confini — è sano.",note:"È un consiglio → 'should'. I modali non prendono mai la -s! 🧠"},
+      {type:"choice",q:"You ___ set your boundaries  it's healthy.",options:["should","musts","cans"],answer:"should",it:"Dovresti stabilire i tuoi confini  è sano.",note:"È un consiglio → 'should'. I modali non prendono mai la -s! 🧠"},
       {type:"fill",q:"She ___ speak three languages fluently.",verb:"sa fare · usa 'can'",hint:"capacità · lei",answer:"can",it:"Sa parlare tre lingue correntemente.",note:"Capacità → 'can' + verbo base. 'can speak', mai 'can to speak'!"},
       {type:"choice",q:"You ___ drink water before pilates class.",options:["must","must to","musts"],answer:"must",it:"Devi bere acqua prima della lezione di pilates.",note:"Obbligo forte → 'must' + verbo base. Niente 'to', niente -s! 💧"},
-      {type:"reorder",tokens:["You","should","be","kind","to","yourself"],answer:"You should be kind to yourself",it:"Dovresti essere gentile con te stessa.",note:"Schema: soggetto + should + verbo base. 'Be kind to yourself' — un consiglio prezioso! 💗"},
+      {type:"reorder",tokens:["You","should","be","kind","to","yourself"],answer:"You should be kind to yourself",it:"Dovresti essere gentile con te stessa.",note:"Schema: soggetto + should + verbo base. 'Be kind to yourself'  un consiglio prezioso! 💗"},
       {type:"fill",q:"___ you help me with my English, please?",verb:"richiesta gentile · usa 'can'",hint:"inizia la domanda",answer:"Can",it:"Puoi aiutarmi con il mio inglese, per favore?",note:"'Can' a inizio frase = richiesta gentile. 'Can you...?' è utilissima ogni giorno!"},
       {type:"choice",q:"We ___ not give up on our dreams.",options:["should","shoulds","musting"],answer:"should",it:"Non dovremmo arrenderci sui nostri sogni.",note:"Forma negativa: should + not + verbo base. 'Give up' = arrendersi (phrasal verb)! ✨"},
       {type:"reading",title:"Tips for learning English",emoji:"🌟",
-        text:"If you want to learn English, you should practice a little every day. You can listen to songs, watch your favorite TV shows, and read romance novels in English. You must be patient with yourself — learning takes time. You should not be afraid of mistakes, because mistakes help you grow. And remember: you can do this!",
+        text:"If you want to learn English, you should practice a little every day. You can listen to songs, watch your favorite TV shows, and read romance novels in English. You must be patient with yourself  learning takes time. You should not be afraid of mistakes, because mistakes help you grow. And remember: you can do this!",
         questions:[
           {q:"How often should you practice?",options:["A little every day","Once a year","Only on weekends"],answer:"A little every day",note:"\"...you should practice a little every day.\" Il consiglio del proverbio della gallina! 🐔"},
           {q:"What must you be with yourself?",options:["Patient","Angry","Perfect"],answer:"Patient",note:"\"You must be patient with yourself.\" 'Patient' = paziente."},
@@ -949,14 +949,14 @@ const LEVELS=[
 const ACHIEVEMENTS=[
   {id:"first_word",icon:"🌱",title:"Prima Parola!",desc:"Hai imparato la tua prima parola in inglese!"},
   {id:"ten_words",icon:"✨",title:"10 Parole!",desc:"Stai crescendo velocemente!"},
-  {id:"fifty_words",icon:"💫",title:"50 Parole!",desc:"Sei a metà strada — ottimo lavoro!"},
-  {id:"hundred_words",icon:"🌟",title:"100 Parole!",desc:"Sei incredibile — quasi una maestra!"},
-  {id:"perfect_quiz",icon:"💯",title:"Quiz Perfetta!",desc:"10/10 corrette — straordinaria!"},
+  {id:"fifty_words",icon:"💫",title:"50 Parole!",desc:"Sei a metà strada  ottimo lavoro!"},
+  {id:"hundred_words",icon:"🌟",title:"100 Parole!",desc:"Sei incredibile  quasi una maestra!"},
+  {id:"perfect_quiz",icon:"💯",title:"Quiz Perfetta!",desc:"10/10 corrette  straordinaria!"},
   {id:"streak_3",icon:"🔥",title:"3 giorni di fila!",desc:"La costanza è la chiave del successo!"},
   {id:"streak_7",icon:"🔥🔥",title:"7 giorni di fila!",desc:"Una settimana intera! Bravissima!"},
-  {id:"full_moon",icon:"🌕",title:"Luna Piena!",desc:"Hai raggiunto 100 XP — fantastica!"},
+  {id:"full_moon",icon:"🌕",title:"Luna Piena!",desc:"Hai raggiunto 100 XP  fantastica!"},
   {id:"daily_done",icon:"📅",title:"Prima Sfida del Giorno!",desc:"Prima sfida quotidiana completata!"},
-  {id:"master",icon:"👑",title:"Maestra!",desc:"Hai raggiunto il livello massimo — leggendaria!"},
+  {id:"master",icon:"👑",title:"Maestra!",desc:"Hai raggiunto il livello massimo  leggendaria!"},
   {id:"false_friend",icon:"🚨",title:"Amica dei False Friends!",desc:"Hai imparato i false friends più insidiosi!"},
   {id:"grammar_done",icon:"📝",title:"Studentessa Modello!",desc:"Hai completato la tua prima lezione di grammatica!"},
 ];
