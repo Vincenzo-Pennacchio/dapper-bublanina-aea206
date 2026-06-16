@@ -630,10 +630,10 @@ function App(){
           <span style={{color:"#f48fb1",fontSize:18}}>›</span>
         </div>
         {[
-          {id:"crystal",icon:"💎",label:"Cristalli & Luna",sub:"10 cristalli · consigli lunari",done:cDone,total:cW.length},
-          {id:"zodiac",icon:"⭐",label:"Astrologia",sub:"12 segni · Sagittario ♏"},
-          {id:"facts",icon:"🌊",label:"Fun Facts",sub:"21 temi · False Friends",done:fDone,total:fW.length},
-          {id:"tv",icon:"📺",label:"Serie TV",sub:`${tDone} frasi · 7 serie`},
+          {id:"crystal",icon:"💎",label:"Cristalli & Luna",sub:`${CRYSTALS.length} cristalli · consigli lunari`,done:cDone,total:cW.length},
+          {id:"zodiac",icon:"⭐",label:"Astrologia",sub:`${ZODIAC.length} segni · Sagittario ♏`},
+          {id:"facts",icon:"🌊",label:"Fun Facts",sub:`${FACTS.length} temi · False Friends`,done:fDone,total:fW.length},
+          {id:"tv",icon:"📺",label:"Serie TV",sub:`${tDone} frasi · ${TV.length} serie`},
           {id:"quizPick",icon:"🎮",label:"Quiz & Sfide",sub:"Normale · Inverso · Sfida"},
           {id:"grammarPick",icon:"📝",label:"Grammatica",sub:`${GRAMMAR.length} lezioni · scrivi, scegli, leggi`},
           {id:"achievements",icon:"🏆",label:"I Tuoi Badge",sub:`${achievements.size}/${ACHIEVEMENTS.length} sbloccati`,done:achievements.size,total:ACHIEVEMENTS.length},
