@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(grep -roE \"presets[^;]{0,80}react[^;]{0,40}\" node_modules/@babel/standalone/babel.js)",
+      "Bash(node -e \"console.log\\('local @babel/standalone version:', require\\('@babel/standalone/package.json'\\).version\\)\")"
+    ]
+  }
+}
